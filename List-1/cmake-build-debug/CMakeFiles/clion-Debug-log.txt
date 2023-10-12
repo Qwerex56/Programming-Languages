@@ -1,0 +1,4 @@
+/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -DCMAKE_C_COMPILER=/usr/bin/gcc -G Ninja -S /home/adrianczubaty/Dokumenty/Programming-Languages/List-1 -B /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug
