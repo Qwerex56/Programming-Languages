@@ -13,15 +13,20 @@ class DecimalCoder : public NumberCoder {
 public:
     ~DecimalCoder() override;
 
-    CodedNumber operator ()(uint8_t number) override;
-    uint8_t operator ()(CodedNumber codedNumber) override;
+    CodedNumber operator ()(uint64_t number) override;
+    uint64_t operator ()(CodedNumber codedNumber) override;
+
+
+    [[nodiscard]] inline const int getBase() const override {
+        return _base;
+    }
 };
 
 template<int base>
 DecimalCoder<base>::~DecimalCoder() = default;
 
 template<int base>
-CodedNumber DecimalCoder<base>::operator()(uint8_t number) {
+CodedNumber DecimalCoder<base>::operator()(uint64_t number) {
     CodedNumber numberInBase;
 
     while (number > 0) {
@@ -35,8 +40,8 @@ CodedNumber DecimalCoder<base>::operator()(uint8_t number) {
 }
 
 template<int base>
-uint8_t DecimalCoder<base>::operator()(std::vector<uint8_t> codedNumber) {
-    auto accumulator = uint8_t {0};
+uint64_t DecimalCoder<base>::operator()(std::vector<uint8_t> codedNumber) {
+    auto accumulator = uint64_t {0};
 
     for (auto it = 0, factor = static_cast<int>(codedNumber.size() - 1); it < codedNumber.size(); it++, factor--) {
         accumulator += codedNumber[it] * std::pow(base, factor);

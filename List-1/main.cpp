@@ -4,15 +4,18 @@
 #include "./headers/NthBaseNumber.h"
 
 int main() {
-    const auto hexCoder = std::make_shared<DecimalCoder<10>>();
-    const auto fourthCoder = std::make_shared<DecimalCoder<4>>();
+    const auto decCoder = std::make_shared<DecimalCoder<3>>();
+    const auto hexCoder = std::make_shared<DecimalCoder<2>>();
 
-    auto item1 = NthBaseNumber(15, hexCoder);
-    auto item2 = NthBaseNumber(5, fourthCoder);
+    auto item1 = NthBaseNumber(9, hexCoder);
+    auto item2 = NthBaseNumber(2, decCoder);
+    auto item3 = NthBaseNumber();
 
-    item2.ChangeBase(hexCoder);
+    item3 = item2 + item1;
 
-    std::cout << item1 << std::endl << "+ " << item2 << std::endl << "----" << std::endl << item1 + item2;
+    std::cout << item1 << "+" << item2 << "=" << item3 << std::endl;
+
+    std::cout << *(new NthBaseNumber(1231829375098723455, std::make_shared<DecimalCoder<20>>()));
 
     return 0;
 }
