@@ -5,7 +5,7 @@
 #ifndef LIST_1_DECIMALCODER_H
 #define LIST_1_DECIMALCODER_H
 
-#include "NumberCoder.h"
+#include "../Interfaces/NumberCoder.h"
 #include <cmath>
 
 template <int _base>
@@ -16,8 +16,7 @@ public:
     CodedNumber operator ()(uint64_t number) override;
     uint64_t operator ()(CodedNumber codedNumber) override;
 
-
-    [[nodiscard]] inline const int getBase() const override {
+    [[nodiscard]] inline constexpr int getBase() const override {
         return _base;
     }
 };
@@ -33,7 +32,7 @@ CodedNumber DecimalCoder<base>::operator()(uint64_t number) {
         uint8_t remainder = number % base;
         number /= base;
 
-        numberInBase.emplace(numberInBase.begin(), remainder);
+        numberInBase.push_back(remainder);
     }
 
     return numberInBase;
@@ -42,12 +41,13 @@ CodedNumber DecimalCoder<base>::operator()(uint64_t number) {
 template<int base>
 uint64_t DecimalCoder<base>::operator()(std::vector<uint8_t> codedNumber) {
     auto accumulator = uint64_t {0};
+    auto factor { 0 };
 
-    for (auto it = 0, factor = static_cast<int>(codedNumber.size() - 1); it < codedNumber.size(); it++, factor--) {
-        accumulator += codedNumber[it] * std::pow(base, factor);
+    for (auto & frag : codedNumber) {
+        accumulator += frag * std::pow(base, factor);
+        factor += 1;
     }
 
     return accumulator;
 }
-
 #endif //LIST_1_DECIMALCODER_H

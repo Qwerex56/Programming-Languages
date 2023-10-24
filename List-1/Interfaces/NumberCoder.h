@@ -18,7 +18,7 @@ public:
     virtual CodedNumber operator ()(uint64_t numberToCode) = 0;
     virtual uint64_t operator ()(CodedNumber numberToDecode) = 0;
 
-    [[nodiscard]] virtual inline const int getBase() const = 0;
+    [[nodiscard]] virtual inline constexpr int getBase() const = 0;
 };
 
 #endif //LIST_1_NUMBERCODER_H

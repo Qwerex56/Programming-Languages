@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="List_1"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="List_1">
+				<Option output="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/List_1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 List_1"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="List_1/fast">
+				<Option output="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/List_1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 List_1/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/Interfaces/NumberCoder.h">
+			<Option target="List_1"/>
+		</Unit>
+		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/headers/DecimalCoder.h">
+			<Option target="List_1"/>
+		</Unit>
+		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/headers/NthBaseNumber.h">
+			<Option target="List_1"/>
+		</Unit>
+		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/main.cpp">
+			<Option target="List_1"/>
+		</Unit>
+		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/src/NthBaseNumber.cpp">
+			<Option target="List_1"/>
+		</Unit>
+		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

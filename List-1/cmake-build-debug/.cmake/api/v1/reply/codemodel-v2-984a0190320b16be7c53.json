@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "List_1::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-List_1-Debug-a24716cabe66c542c181.json",
+					"jsonFile" : "target-List_1-Debug-9874b41efb1e25898ffe.json",
 					"name" : "List_1",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug",
-		"source" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1"
+		"build" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug",
+		"source" : "/home/adrianczubaty/Documents/Programming-Languages/List-1"
 	},
 	"version" : 
 	{
