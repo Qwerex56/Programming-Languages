@@ -1,1 +1,0 @@
-/usr/bin/c++  -fmodules-ts -g CMakeFiles/List_1.dir/main.cpp.o CMakeFiles/List_1.dir/src/NthBaseNumber.cpp.o -o List_1 

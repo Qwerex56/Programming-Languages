@@ -11,6 +11,7 @@ NthBaseNumber::NthBaseNumber(uint64_t init, const std::shared_ptr<NumberCoder> &
 
 NthBaseNumber::NthBaseNumber(std::vector<uint8_t> &init, const std::shared_ptr<NumberCoder> &nc) {
     _spNumberCoder = nc ? nc : std::make_shared<DecimalCoder<10>>();
+    std::reverse(init.begin(), init.end());
     number = std::move(init);
 }
 
@@ -172,7 +173,7 @@ NthBaseNumber NthBaseNumber::operator*(NthBaseNumber &other) {
             }
         }
 
-        PushCarryOver(multiple);
+        PushCarryOver(multiple, carry);
         sum = sum + multiple;
         additionalZeros += 1;
     }
@@ -186,11 +187,11 @@ NthBaseNumber& NthBaseNumber::operator ++() {
     return *this;
 }
 
-NthBaseNumber NthBaseNumber::operator ++(int) {
+/*NthBaseNumber NthBaseNumber::operator ++(int) {
     auto old = *this;
     operator++();
     return old;
-}
+}*/
 
 bool NthBaseNumber::operator ==(const NthBaseNumber &other) const {
     if (this->number.size() != other.number.size()) {
@@ -212,6 +213,7 @@ bool NthBaseNumber::operator !=(const NthBaseNumber &other) const {
 
 bool NthBaseNumber::operator <(NthBaseNumber &other) {
     EqualizeLength(this->number, other.number);
+
     auto it = this->number.crbegin();
     auto otherIt = other.number.crbegin();
 
@@ -220,7 +222,6 @@ bool NthBaseNumber::operator <(NthBaseNumber &other) {
     }
 
     while (it != this->number.crend()) {
-        std::cout << (int)*it << " < " << (int)*otherIt << " = " << (*it < *otherIt) << std::endl;
         if (static_cast<int>(*it) < static_cast<int>(*otherIt)) {
             return true;
         }

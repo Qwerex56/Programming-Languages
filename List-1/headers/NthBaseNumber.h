@@ -28,9 +28,7 @@ public:
     NthBaseNumber operator +(NthBaseNumber &other);
     NthBaseNumber operator -(NthBaseNumber &other);
     NthBaseNumber operator *(NthBaseNumber &other);
-    NthBaseNumber operator /(NthBaseNumber &other);
     NthBaseNumber& operator ++();
-    NthBaseNumber operator ++(int);
 
     bool operator ==(const NthBaseNumber &other) const;
     bool operator !=(const NthBaseNumber &other) const;
