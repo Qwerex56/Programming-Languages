@@ -4,13 +4,13 @@
 
 #include "../headers/NthBaseNumber.h"
 
-NthBaseNumber::NthBaseNumber(uint64_t init, const std::shared_ptr<NumberCoder> &nc) {
-    _spNumberCoder = nc ? nc : std::make_shared<DecimalCoder<10>>();
+NthBaseNumber::NthBaseNumber(int64_t init, const std::shared_ptr<NumberCoder> &nc) {
+    _spNumberCoder = nc ? nc : std::make_shared<UBaseCoder<10>>();
     number = (*_spNumberCoder)(init);
 }
 
 NthBaseNumber::NthBaseNumber(std::vector<uint8_t> &init, const std::shared_ptr<NumberCoder> &nc) {
-    _spNumberCoder = nc ? nc : std::make_shared<DecimalCoder<10>>();
+    _spNumberCoder = nc ? nc : std::make_shared<UBaseCoder<10>>();
     std::reverse(init.begin(), init.end());
     number = std::move(init);
 }
@@ -25,7 +25,7 @@ NthBaseNumber::NthBaseNumber(const NthBaseNumber &other) {
 }
 
 [[maybe_unused]] void NthBaseNumber::ChangeBase(const std::shared_ptr<NumberCoder> &newNc) {
-    uint64_t numberCache = (*_spNumberCoder)(number);
+    int64_t numberCache = (*_spNumberCoder)(number);
     number.clear();
 
     this->_spNumberCoder = newNc;

@@ -8,6 +8,6 @@ add_executable(
         List_1 main.cpp
         src/NthBaseNumber.cpp
         headers/NthBaseNumber.h
-        headers/DecimalCoder.h
+        headers/UBaseCoder.h
         Interfaces/NumberCoder.h
 )

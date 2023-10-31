@@ -6,7 +6,7 @@
 #define LIST_1_NTHBASENUMBER_H
 
 #include "../Interfaces/NumberCoder.h"
-#include "DecimalCoder.h"
+#include "UBaseCoder.h"
 #include <iostream>
 #include <memory>
 #include <utility>
@@ -15,7 +15,7 @@
 
 class NthBaseNumber {
 public:
-    explicit NthBaseNumber(uint64_t init = 0, const std::shared_ptr<NumberCoder> &nc = nullptr);
+    explicit NthBaseNumber(int64_t init = 0, const std::shared_ptr<NumberCoder> &nc = nullptr);
     explicit NthBaseNumber(CodedNumber &init, const std::shared_ptr<NumberCoder> &nc = nullptr);
     NthBaseNumber(const NthBaseNumber &other);
 

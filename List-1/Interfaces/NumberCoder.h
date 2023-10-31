@@ -15,8 +15,8 @@ class NumberCoder {
 public:
     virtual ~NumberCoder() = default;
 
-    virtual CodedNumber operator ()(uint64_t numberToCode) = 0;
-    virtual uint64_t operator ()(CodedNumber numberToDecode) = 0;
+    virtual CodedNumber operator ()(int64_t numberToCode) = 0;
+    virtual int64_t operator ()(const CodedNumber &numberToDecode) = 0;
 
     [[nodiscard]] virtual inline constexpr int getBase() const = 0;
 };
