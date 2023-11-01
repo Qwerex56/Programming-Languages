@@ -7,6 +7,7 @@
 
 #include "../Interfaces/NumberCoder.h"
 #include <cmath>
+#include <memory>
 
 template <int _base>
 class UBaseCoder : public NumberCoder {
@@ -16,13 +17,14 @@ public:
     CodedNumber operator ()(int64_t number) final;
     int64_t operator ()(const CodedNumber &codedNumber) final;
 
-    [[nodiscard]] inline constexpr int getBase() const final {
+    [[nodiscard]]
+    inline constexpr int getBase() const final {
         return _base;
     }
 
 private:
     /*
-     * Second and third step in converting number to U`x base.
+     * Second and third step in converting _number to U`x base.
      * Adds 1 and sign bit
      * */
     void convertToNeg(CodedNumber &number);
@@ -45,10 +47,11 @@ CodedNumber UBaseCoder<base>::operator()(int64_t number) {
         uint8_t remainder = number % base;
         number /= base;
 
-        isNegative?
-            numberInBase.push_back((base - 1) - remainder) :
-            numberInBase.push_back(remainder);
+        numberInBase.push_back(remainder);
     }
+
+    // Add additional bit for sign
+    numberInBase.push_back(0);
 
     if (isNegative) {
         convertToNeg(numberInBase);
@@ -68,6 +71,7 @@ int64_t UBaseCoder<base>::operator()(const CodedNumber &codedNumber) {
     }
 
     if (codedNumber[codedNumber.size() - 1] == getBase() - 1) {
+        std::cout << *codedNumber.end() << std::endl;
         accumulator -= (std::pow(base, factor));
     }
 
@@ -76,17 +80,24 @@ int64_t UBaseCoder<base>::operator()(const CodedNumber &codedNumber) {
 
 template<int base>
 void UBaseCoder<base>::convertToNeg(CodedNumber &number) {
-    auto carry = true;
-    for (auto &mag : number) {
+    auto convertedNumber = std::vector(number.size(), static_cast<uint8_t>(base - 1));
+    auto carry = 1;
+
+    for (auto i = 0; i < number.size(); i++) {
+        convertedNumber[i] -= number[i];
+    }
+
+    for (auto & mag : convertedNumber) {
         mag += carry;
         if (mag >= base) {
             mag -= base;
-            carry = true;
+            carry = 1;
         } else {
-            carry = false;
+            carry = 0;
         }
     }
-
-    number.push_back(base - 1);
+    
+    number = convertedNumber;
 }
+
 #endif //LIST_1_UBASECODER_H
