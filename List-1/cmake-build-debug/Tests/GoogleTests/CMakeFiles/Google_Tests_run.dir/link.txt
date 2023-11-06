@@ -1,1 +1,1 @@
-/usr/bin/c++  -fmodules-ts -g CMakeFiles/Google_Tests_run.dir/test1.cpp.o -o Google_Tests_run  ../../lib/libgtest.a ../../lib/libgtest_main.a ../../lib/libgtest.a 
+/usr/bin/c++ -g CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.o CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.o -o Google_Tests_run  ../../NthBaseCalculatorLib/libNthBaseCalculatorLib.a ../../lib/libgtest.a ../../lib/libgtest_main.a ../../lib/libgtest.a 

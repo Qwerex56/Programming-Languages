@@ -162,17 +162,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named List_1
+# Target rules for targets named NthBaseCalculator_run
 
 # Build rule for target.
-List_1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 List_1
-.PHONY : List_1
+NthBaseCalculator_run: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NthBaseCalculator_run
+.PHONY : NthBaseCalculator_run
 
 # fast build rule for target.
-List_1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/List_1.dir/build.make CMakeFiles/List_1.dir/build
-.PHONY : List_1/fast
+NthBaseCalculator_run/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NthBaseCalculator_run.dir/build.make CMakeFiles/NthBaseCalculator_run.dir/build
+.PHONY : NthBaseCalculator_run/fast
+
+#=============================================================================
+# Target rules for targets named NthBaseCalculatorLib
+
+# Build rule for target.
+NthBaseCalculatorLib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NthBaseCalculatorLib
+.PHONY : NthBaseCalculatorLib
+
+# fast build rule for target.
+NthBaseCalculatorLib/fast:
+	$(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build
+.PHONY : NthBaseCalculatorLib/fast
 
 #=============================================================================
 # Target rules for targets named Google_Tests_run
@@ -244,7 +257,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/List_1.dir/build.make CMakeFiles/List_1.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NthBaseCalculator_run.dir/build.make CMakeFiles/NthBaseCalculator_run.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -252,7 +265,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/List_1.dir/build.make CMakeFiles/List_1.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NthBaseCalculator_run.dir/build.make CMakeFiles/NthBaseCalculator_run.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -260,32 +273,8 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/List_1.dir/build.make CMakeFiles/List_1.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NthBaseCalculator_run.dir/build.make CMakeFiles/NthBaseCalculator_run.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-src/NthBaseNumber.o: src/NthBaseNumber.cpp.o
-.PHONY : src/NthBaseNumber.o
-
-# target to build an object file
-src/NthBaseNumber.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/List_1.dir/build.make CMakeFiles/List_1.dir/src/NthBaseNumber.cpp.o
-.PHONY : src/NthBaseNumber.cpp.o
-
-src/NthBaseNumber.i: src/NthBaseNumber.cpp.i
-.PHONY : src/NthBaseNumber.i
-
-# target to preprocess a source file
-src/NthBaseNumber.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/List_1.dir/build.make CMakeFiles/List_1.dir/src/NthBaseNumber.cpp.i
-.PHONY : src/NthBaseNumber.cpp.i
-
-src/NthBaseNumber.s: src/NthBaseNumber.cpp.s
-.PHONY : src/NthBaseNumber.s
-
-# target to generate assembly for a file
-src/NthBaseNumber.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/List_1.dir/build.make CMakeFiles/List_1.dir/src/NthBaseNumber.cpp.s
-.PHONY : src/NthBaseNumber.cpp.s
 
 # Help Target
 help:
@@ -300,7 +289,8 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... Google_Tests_run"
-	@echo "... List_1"
+	@echo "... NthBaseCalculatorLib"
+	@echo "... NthBaseCalculator_run"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
@@ -308,9 +298,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/NthBaseNumber.o"
-	@echo "... src/NthBaseNumber.i"
-	@echo "... src/NthBaseNumber.s"
 .PHONY : help
 
 

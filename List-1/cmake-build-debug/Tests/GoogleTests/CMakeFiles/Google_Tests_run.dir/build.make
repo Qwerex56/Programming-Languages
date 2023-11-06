@@ -69,34 +69,51 @@ include Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/progress.make
 # Include the compile flags for this target's objects.
 include Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/flags.make
 
-Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/test1.cpp.o: Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/flags.make
-Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/test1.cpp.o: /home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/test1.cpp
-Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/test1.cpp.o: Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/test1.cpp.o"
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/test1.cpp.o -MF CMakeFiles/Google_Tests_run.dir/test1.cpp.o.d -o CMakeFiles/Google_Tests_run.dir/test1.cpp.o -c /home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/test1.cpp
+Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.o: Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/flags.make
+Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.o: /home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/UBaseCoderTest.cpp
+Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.o: Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.o"
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.o -MF CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.o.d -o CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.o -c /home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/UBaseCoderTest.cpp
 
-Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/test1.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Google_Tests_run.dir/test1.cpp.i"
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/test1.cpp > CMakeFiles/Google_Tests_run.dir/test1.cpp.i
+Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.i"
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/UBaseCoderTest.cpp > CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.i
 
-Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/test1.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Google_Tests_run.dir/test1.cpp.s"
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/test1.cpp -o CMakeFiles/Google_Tests_run.dir/test1.cpp.s
+Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.s"
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/UBaseCoderTest.cpp -o CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.s
+
+Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.o: Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/flags.make
+Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.o: /home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/NthBaseNumberTest.cpp
+Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.o: Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.o"
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.o -MF CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.o.d -o CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.o -c /home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/NthBaseNumberTest.cpp
+
+Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.i"
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/NthBaseNumberTest.cpp > CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.i
+
+Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.s"
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/NthBaseNumberTest.cpp -o CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.s
 
 # Object files for target Google_Tests_run
 Google_Tests_run_OBJECTS = \
-"CMakeFiles/Google_Tests_run.dir/test1.cpp.o"
+"CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.o" \
+"CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.o"
 
 # External object files for target Google_Tests_run
 Google_Tests_run_EXTERNAL_OBJECTS =
 
-Tests/GoogleTests/Google_Tests_run: Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/test1.cpp.o
+Tests/GoogleTests/Google_Tests_run: Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.o
+Tests/GoogleTests/Google_Tests_run: Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.o
 Tests/GoogleTests/Google_Tests_run: Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make
+Tests/GoogleTests/Google_Tests_run: NthBaseCalculatorLib/libNthBaseCalculatorLib.a
 Tests/GoogleTests/Google_Tests_run: lib/libgtest.a
 Tests/GoogleTests/Google_Tests_run: lib/libgtest_main.a
 Tests/GoogleTests/Google_Tests_run: lib/libgtest.a
 Tests/GoogleTests/Google_Tests_run: Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Google_Tests_run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Google_Tests_run"
 	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Google_Tests_run.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

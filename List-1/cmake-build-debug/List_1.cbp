@@ -5,7 +5,7 @@
 		<Option title="List_1"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\Tests\;CMake Files\Tests\GoogleTests\;CMake Files\Tests\GoogleTests\lib\;CMake Files\Tests\GoogleTests\lib\googlemock\;CMake Files\Tests\GoogleTests\lib\googlemock\cmake\;CMake Files\Tests\GoogleTests\lib\googletest\;CMake Files\Tests\GoogleTests\lib\googletest\cmake\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\Tests\;CMake Files\Tests\GoogleTests\;CMake Files\Tests\GoogleTests\lib\;CMake Files\Tests\GoogleTests\lib\googlemock\;CMake Files\Tests\GoogleTests\lib\googlemock\cmake\;CMake Files\Tests\GoogleTests\lib\googletest\;CMake Files\Tests\GoogleTests\lib\googletest\cmake\;CMake Files\NthBaseCalculatorLib\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug"/>
@@ -17,13 +17,14 @@
 					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="List_1">
-				<Option output="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/List_1" prefix_auto="0" extension_auto="0"/>
+			<Target title="NthBaseCalculator_run">
+				<Option output="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculator_run" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/x86_64-redhat-linux"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/backward"/>
@@ -32,19 +33,20 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 List_1"/>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 NthBaseCalculator_run"/>
 					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="List_1/fast">
-				<Option output="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/List_1" prefix_auto="0" extension_auto="0"/>
+			<Target title="NthBaseCalculator_run/fast">
+				<Option output="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculator_run" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/x86_64-redhat-linux"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/backward"/>
@@ -53,7 +55,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 List_1/fast"/>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 NthBaseCalculator_run/fast"/>
 					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -119,6 +121,50 @@
 					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="NthBaseCalculatorLib">
+				<Option output="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib/libNthBaseCalculatorLib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib/Makefile&quot;  VERBOSE=1 NthBaseCalculatorLib"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="NthBaseCalculatorLib/fast">
+				<Option output="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib/libNthBaseCalculatorLib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib/Makefile&quot;  VERBOSE=1 NthBaseCalculatorLib/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="Google_Tests_run">
 				<Option output="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/Google_Tests_run" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests"/>
@@ -126,6 +172,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13"/>
@@ -149,6 +196,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13"/>
@@ -172,6 +220,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock/include"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"/>
@@ -197,6 +246,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock/include"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"/>
@@ -222,6 +272,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock/include"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"/>
@@ -247,6 +298,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock/include"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"/>
@@ -272,6 +324,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13"/>
@@ -295,6 +348,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13"/>
@@ -318,6 +372,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13"/>
@@ -341,6 +396,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13"/>
@@ -358,8 +414,14 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/Interfaces/NumberCoder.h">
-			<Option target="List_1"/>
+		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseNumber.cpp">
+			<Option target="NthBaseCalculatorLib"/>
+		</Unit>
+		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/NthBaseNumberTest.cpp">
+			<Option target="Google_Tests_run"/>
+		</Unit>
+		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/UBaseCoderTest.cpp">
+			<Option target="Google_Tests_run"/>
 		</Unit>
 		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
@@ -373,20 +435,8 @@
 		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/test1.cpp">
-			<Option target="Google_Tests_run"/>
-		</Unit>
-		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/headers/NthBaseNumber.h">
-			<Option target="List_1"/>
-		</Unit>
-		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/headers/UBaseCoder.h">
-			<Option target="List_1"/>
-		</Unit>
 		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/main.cpp">
-			<Option target="List_1"/>
-		</Unit>
-		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/src/NthBaseNumber.cpp">
-			<Option target="List_1"/>
+			<Option target="NthBaseCalculator_run"/>
 		</Unit>
 		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
@@ -420,6 +470,9 @@
 		</Unit>
 		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\Tests\GoogleTests\lib\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\NthBaseCalculatorLib\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

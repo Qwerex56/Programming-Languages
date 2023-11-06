@@ -5,7 +5,7 @@
 		<Option title="googletest-distribution"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\Tests\;CMake Files\Tests\GoogleTests\;CMake Files\Tests\GoogleTests\lib\;CMake Files\Tests\GoogleTests\lib\googlemock\;CMake Files\Tests\GoogleTests\lib\googlemock\cmake\;CMake Files\Tests\GoogleTests\lib\googletest\;CMake Files\Tests\GoogleTests\lib\googletest\cmake\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\Tests\;CMake Files\Tests\GoogleTests\;CMake Files\Tests\GoogleTests\lib\;CMake Files\Tests\GoogleTests\lib\googlemock\;CMake Files\Tests\GoogleTests\lib\googlemock\cmake\;CMake Files\Tests\GoogleTests\lib\googletest\;CMake Files\Tests\GoogleTests\lib\googletest\cmake\;CMake Files\NthBaseCalculatorLib\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib"/>
@@ -24,6 +24,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock/include"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"/>
@@ -49,6 +50,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock/include"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"/>
@@ -74,6 +76,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock/include"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"/>
@@ -99,6 +102,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock/include"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"/>
@@ -124,6 +128,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13"/>
@@ -147,6 +152,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13"/>
@@ -170,6 +176,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13"/>
@@ -193,6 +200,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"/>
 					<Add directory="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13"/>
@@ -254,6 +262,9 @@
 		</Unit>
 		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\Tests\GoogleTests\lib\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\NthBaseCalculatorLib\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

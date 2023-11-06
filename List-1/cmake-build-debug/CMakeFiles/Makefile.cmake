@@ -42,6 +42,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/ProcessorCount.cmake"
   "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake"
   "/home/adrianczubaty/Documents/Programming-Languages/List-1/CMakeLists.txt"
+  "/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/CMakeLists.txt"
   "/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/CMakeLists.txt"
   "/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/CMakeLists.txt"
   "/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock/CMakeLists.txt"
@@ -66,6 +67,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "NthBaseCalculatorLib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Tests/GoogleTests/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Tests/GoogleTests/lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Tests/GoogleTests/lib/googletest/generated/gmock.pc"
@@ -80,7 +82,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/List_1.dir/DependInfo.cmake"
+  "CMakeFiles/NthBaseCalculator_run.dir/DependInfo.cmake"
+  "NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/DependInfo.cmake"
   "Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/DependInfo.cmake"
   "Tests/GoogleTests/lib/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "Tests/GoogleTests/lib/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"

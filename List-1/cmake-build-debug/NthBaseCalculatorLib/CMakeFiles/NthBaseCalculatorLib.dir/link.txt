@@ -1,0 +1,2 @@
+/usr/bin/ar qc libNthBaseCalculatorLib.a CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o
+/usr/bin/ranlib libNthBaseCalculatorLib.a

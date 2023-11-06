@@ -63,18 +63,36 @@ CMAKE_BINARY_DIR = /home/adrianczubaty/Documents/Programming-Languages/List-1/cm
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/List_1.dir/all
+all: CMakeFiles/NthBaseCalculator_run.dir/all
+all: NthBaseCalculatorLib/all
 all: Tests/GoogleTests/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
+preinstall: NthBaseCalculatorLib/preinstall
 preinstall: Tests/GoogleTests/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/List_1.dir/clean
+clean: CMakeFiles/NthBaseCalculator_run.dir/clean
+clean: NthBaseCalculatorLib/clean
 clean: Tests/GoogleTests/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory NthBaseCalculatorLib
+
+# Recursive "all" directory target.
+NthBaseCalculatorLib/all: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/all
+.PHONY : NthBaseCalculatorLib/all
+
+# Recursive "preinstall" directory target.
+NthBaseCalculatorLib/preinstall:
+.PHONY : NthBaseCalculatorLib/preinstall
+
+# Recursive "clean" directory target.
+NthBaseCalculatorLib/clean: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/clean
+.PHONY : NthBaseCalculatorLib/clean
 
 #=============================================================================
 # Directory level rules for directory Tests/GoogleTests
@@ -145,45 +163,72 @@ Tests/GoogleTests/lib/googletest/clean: Tests/GoogleTests/lib/googletest/CMakeFi
 .PHONY : Tests/GoogleTests/lib/googletest/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/List_1.dir
+# Target rules for target CMakeFiles/NthBaseCalculator_run.dir
 
 # All Build rule for target.
-CMakeFiles/List_1.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/List_1.dir/build.make CMakeFiles/List_1.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/List_1.dir/build.make CMakeFiles/List_1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=3,4,5 "Built target List_1"
-.PHONY : CMakeFiles/List_1.dir/all
+CMakeFiles/NthBaseCalculator_run.dir/all: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NthBaseCalculator_run.dir/build.make CMakeFiles/NthBaseCalculator_run.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NthBaseCalculator_run.dir/build.make CMakeFiles/NthBaseCalculator_run.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=6,7 "Built target NthBaseCalculator_run"
+.PHONY : CMakeFiles/NthBaseCalculator_run.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/List_1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/List_1.dir/all
+CMakeFiles/NthBaseCalculator_run.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/NthBaseCalculator_run.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/List_1.dir/rule
+.PHONY : CMakeFiles/NthBaseCalculator_run.dir/rule
 
 # Convenience name for target.
-List_1: CMakeFiles/List_1.dir/rule
-.PHONY : List_1
+NthBaseCalculator_run: CMakeFiles/NthBaseCalculator_run.dir/rule
+.PHONY : NthBaseCalculator_run
 
 # clean rule for target.
-CMakeFiles/List_1.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/List_1.dir/build.make CMakeFiles/List_1.dir/clean
-.PHONY : CMakeFiles/List_1.dir/clean
+CMakeFiles/NthBaseCalculator_run.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NthBaseCalculator_run.dir/build.make CMakeFiles/NthBaseCalculator_run.dir/clean
+.PHONY : CMakeFiles/NthBaseCalculator_run.dir/clean
+
+#=============================================================================
+# Target rules for target NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir
+
+# All Build rule for target.
+NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/all:
+	$(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/depend
+	$(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=4,5 "Built target NthBaseCalculatorLib"
+.PHONY : NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/all
+
+# Build rule for subdir invocation for target.
+NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles 0
+.PHONY : NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/rule
+
+# Convenience name for target.
+NthBaseCalculatorLib: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/rule
+.PHONY : NthBaseCalculatorLib
+
+# clean rule for target.
+NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/clean
+.PHONY : NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/clean
 
 #=============================================================================
 # Target rules for target Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir
 
 # All Build rule for target.
+Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/all: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/all
 Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/all: Tests/GoogleTests/lib/googletest/CMakeFiles/gtest.dir/all
 Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/all: Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/depend
 	$(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Google_Tests_run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target Google_Tests_run"
 .PHONY : Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/all
 
 # Build rule for subdir invocation for target.
 Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles 0
 .PHONY : Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/rule
@@ -204,7 +249,7 @@ Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/clean:
 Tests/GoogleTests/lib/googlemock/CMakeFiles/gmock.dir/all: Tests/GoogleTests/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f Tests/GoogleTests/lib/googlemock/CMakeFiles/gmock.dir/build.make Tests/GoogleTests/lib/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f Tests/GoogleTests/lib/googlemock/CMakeFiles/gmock.dir/build.make Tests/GoogleTests/lib/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=6,7 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=8,9 "Built target gmock"
 .PHONY : Tests/GoogleTests/lib/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -231,7 +276,7 @@ Tests/GoogleTests/lib/googlemock/CMakeFiles/gmock_main.dir/all: Tests/GoogleTest
 Tests/GoogleTests/lib/googlemock/CMakeFiles/gmock_main.dir/all: Tests/GoogleTests/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f Tests/GoogleTests/lib/googlemock/CMakeFiles/gmock_main.dir/build.make Tests/GoogleTests/lib/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f Tests/GoogleTests/lib/googlemock/CMakeFiles/gmock_main.dir/build.make Tests/GoogleTests/lib/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=8,9 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=10,11 "Built target gmock_main"
 .PHONY : Tests/GoogleTests/lib/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -257,7 +302,7 @@ Tests/GoogleTests/lib/googlemock/CMakeFiles/gmock_main.dir/clean:
 Tests/GoogleTests/lib/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f Tests/GoogleTests/lib/googletest/CMakeFiles/gtest.dir/build.make Tests/GoogleTests/lib/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f Tests/GoogleTests/lib/googletest/CMakeFiles/gtest.dir/build.make Tests/GoogleTests/lib/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=10,11 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=12,13 "Built target gtest"
 .PHONY : Tests/GoogleTests/lib/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -283,7 +328,7 @@ Tests/GoogleTests/lib/googletest/CMakeFiles/gtest.dir/clean:
 Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/all: Tests/GoogleTests/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/build.make Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/build.make Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=12,13 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=14,15 "Built target gtest_main"
 .PHONY : Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.

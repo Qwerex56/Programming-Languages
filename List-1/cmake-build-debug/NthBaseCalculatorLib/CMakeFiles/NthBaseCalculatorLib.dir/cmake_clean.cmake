@@ -1,0 +1,11 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o"
+  "CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o.d"
+  "libNthBaseCalculatorLib.a"
+  "libNthBaseCalculatorLib.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/NthBaseCalculatorLib.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/NthBaseCalculator_run.dir/main.cpp.o -o NthBaseCalculator_run  NthBaseCalculatorLib/libNthBaseCalculatorLib.a 

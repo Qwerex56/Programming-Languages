@@ -175,29 +175,53 @@ Google_Tests_run/fast:
 	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build
 .PHONY : Google_Tests_run/fast
 
-test1.o: test1.cpp.o
-.PHONY : test1.o
+NthBaseNumberTest.o: NthBaseNumberTest.cpp.o
+.PHONY : NthBaseNumberTest.o
 
 # target to build an object file
-test1.cpp.o:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/test1.cpp.o
-.PHONY : test1.cpp.o
+NthBaseNumberTest.cpp.o:
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.o
+.PHONY : NthBaseNumberTest.cpp.o
 
-test1.i: test1.cpp.i
-.PHONY : test1.i
+NthBaseNumberTest.i: NthBaseNumberTest.cpp.i
+.PHONY : NthBaseNumberTest.i
 
 # target to preprocess a source file
-test1.cpp.i:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/test1.cpp.i
-.PHONY : test1.cpp.i
+NthBaseNumberTest.cpp.i:
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.i
+.PHONY : NthBaseNumberTest.cpp.i
 
-test1.s: test1.cpp.s
-.PHONY : test1.s
+NthBaseNumberTest.s: NthBaseNumberTest.cpp.s
+.PHONY : NthBaseNumberTest.s
 
 # target to generate assembly for a file
-test1.cpp.s:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/test1.cpp.s
-.PHONY : test1.cpp.s
+NthBaseNumberTest.cpp.s:
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.s
+.PHONY : NthBaseNumberTest.cpp.s
+
+UBaseCoderTest.o: UBaseCoderTest.cpp.o
+.PHONY : UBaseCoderTest.o
+
+# target to build an object file
+UBaseCoderTest.cpp.o:
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.o
+.PHONY : UBaseCoderTest.cpp.o
+
+UBaseCoderTest.i: UBaseCoderTest.cpp.i
+.PHONY : UBaseCoderTest.i
+
+# target to preprocess a source file
+UBaseCoderTest.cpp.i:
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.i
+.PHONY : UBaseCoderTest.cpp.i
+
+UBaseCoderTest.s: UBaseCoderTest.cpp.s
+.PHONY : UBaseCoderTest.s
+
+# target to generate assembly for a file
+UBaseCoderTest.cpp.s:
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.s
+.PHONY : UBaseCoderTest.cpp.s
 
 # Help Target
 help:
@@ -212,9 +236,12 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... Google_Tests_run"
-	@echo "... test1.o"
-	@echo "... test1.i"
-	@echo "... test1.s"
+	@echo "... NthBaseNumberTest.o"
+	@echo "... NthBaseNumberTest.i"
+	@echo "... NthBaseNumberTest.s"
+	@echo "... UBaseCoderTest.o"
+	@echo "... UBaseCoderTest.i"
+	@echo "... UBaseCoderTest.s"
 .PHONY : help
 
 
