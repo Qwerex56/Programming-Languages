@@ -70,7 +70,7 @@ int64_t UBaseCoder<base>::operator()(const CodedNumber &codedNumber) {
         factor += 1;
     }
 
-    if (codedNumber[codedNumber.size() - 1] == getBase() - 1) {
+    if (codedNumber[codedNumber.size() - 1] >= getBase() / 2) {
         std::cout << *codedNumber.end() << std::endl;
         accumulator -= (std::pow(base, factor));
     }

@@ -1,3 +1,3 @@
-/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/CMakeFiles/List_1.dir
-/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles/List_1.dir
+/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
