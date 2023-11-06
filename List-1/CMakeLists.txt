@@ -11,3 +11,5 @@ add_executable(
         headers/UBaseCoder.h
         Interfaces/NumberCoder.h
 )
+
+add_subdirectory(Tests/GoogleTests)

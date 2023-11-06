@@ -489,3 +489,41 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "Tests/GoogleTests/lib/googletest/cmake/internal_utils.cmake:66 (find_package)"
+      - "Tests/GoogleTests/lib/googletest/CMakeLists.txt:83 (config_compiler_and_linker)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HXdXCk"
+      binary: "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HXdXCk"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HXdXCk
+        
+        Run Build Command(s):/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f8ef7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f8ef7.dir/build.make CMakeFiles/cmTC_f8ef7.dir/build
+        gmake[1]: Entering directory '/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HXdXCk'
+        Building C object CMakeFiles/cmTC_f8ef7.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fdiagnostics-color=always -o CMakeFiles/cmTC_f8ef7.dir/src.c.o -c /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HXdXCk/src.c
+        Linking C executable cmTC_f8ef7
+        /home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f8ef7.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_f8ef7.dir/src.c.o -o cmTC_f8ef7 
+        gmake[1]: Leaving directory '/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HXdXCk'
+        
+      exitCode: 0
+...
