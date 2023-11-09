@@ -5,6 +5,8 @@
 #ifndef LIST_1_NTHBASENUMBER_H
 #define LIST_1_NTHBASENUMBER_H
 
+#define NATURAL_SYSTEM 10
+
 #include "NumberCoder.h"
 #include "UBaseCoder.h"
 #include <iostream>
@@ -20,6 +22,7 @@ public:
     explicit NthBaseNumber(CodedNumber &init, bool isReversed = false, const std::shared_ptr<NumberCoder> &nc = nullptr);
     explicit NthBaseNumber(CodedNumber &&init, bool isReversed = false, const std::shared_ptr<NumberCoder> &nc = nullptr);
     NthBaseNumber(const NthBaseNumber &other);
+    NthBaseNumber(const NthBaseNumber &&other) noexcept;
     NthBaseNumber& operator =(const NthBaseNumber &other);
 
     [[maybe_unused]]
@@ -27,7 +30,7 @@ public:
 
     [[nodiscard]]
     inline int getBase() const noexcept {
-        return this->_spNumberCoder->getBase();
+        return this->_numberCoder->getBase();
     }
 
     [[maybe_unused]]
@@ -45,13 +48,14 @@ public:
     [[maybe_unused]]
     [[nodiscard]]
     inline NthBaseNumber getNegate() const noexcept {
-        auto negative = NthBaseNumber(negate(this->_number, this->getBase()), true, this->_spNumberCoder);
+        auto negative = NthBaseNumber(negate(this->_number, this->getBase()), true, this->_numberCoder);
         return negative;
     }
 
-    NthBaseNumber operator +(NthBaseNumber &other);
-    NthBaseNumber operator -(NthBaseNumber &other);
-    NthBaseNumber operator *(NthBaseNumber &other);
+    NthBaseNumber& operator +=(NthBaseNumber &other);
+    NthBaseNumber& operator -=(NthBaseNumber &other);
+    NthBaseNumber& operator *=(NthBaseNumber &other);
+
     NthBaseNumber& operator ++();
     const NthBaseNumber operator ++(int);
 
@@ -62,7 +66,10 @@ public:
     bool operator <=(const NthBaseNumber &other) const;
     bool operator >=(const NthBaseNumber &other) const;
 
-    friend std::ostream& operator <<(std::ostream &os, NthBaseNumber& number);
+    friend std::ostream& operator <<(std::ostream &os, NthBaseNumber &number);
+    friend NthBaseNumber operator +(NthBaseNumber lhs, NthBaseNumber &rhs);
+    friend NthBaseNumber operator -(NthBaseNumber lhs, NthBaseNumber &rhs);
+    friend NthBaseNumber operator *(NthBaseNumber lhs, NthBaseNumber &rhs);
 
     [[maybe_unused]]
     static inline CodedNumber getNegate(NthBaseNumber &what) {
@@ -72,7 +79,7 @@ public:
     [[maybe_unused]]
     static inline bool isNegative(const NthBaseNumber &what) noexcept;
 private:
-    std::shared_ptr<NumberCoder> _spNumberCoder;
+    std::shared_ptr<NumberCoder> _numberCoder;
     CodedNumber _number;
 
     static void EqualizeLength(CodedNumber &lhs, CodedNumber &rhs, int base);

@@ -199,6 +199,30 @@ src/NthBaseNumber.cpp.s:
 	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.s
 .PHONY : src/NthBaseNumber.cpp.s
 
+src/UBaseCoder.o: src/UBaseCoder.cpp.o
+.PHONY : src/UBaseCoder.o
+
+# target to build an object file
+src/UBaseCoder.cpp.o:
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o
+.PHONY : src/UBaseCoder.cpp.o
+
+src/UBaseCoder.i: src/UBaseCoder.cpp.i
+.PHONY : src/UBaseCoder.i
+
+# target to preprocess a source file
+src/UBaseCoder.cpp.i:
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.i
+.PHONY : src/UBaseCoder.cpp.i
+
+src/UBaseCoder.s: src/UBaseCoder.cpp.s
+.PHONY : src/UBaseCoder.s
+
+# target to generate assembly for a file
+src/UBaseCoder.cpp.s:
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.s
+.PHONY : src/UBaseCoder.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -215,6 +239,9 @@ help:
 	@echo "... src/NthBaseNumber.o"
 	@echo "... src/NthBaseNumber.i"
 	@echo "... src/NthBaseNumber.s"
+	@echo "... src/UBaseCoder.o"
+	@echo "... src/UBaseCoder.i"
+	@echo "... src/UBaseCoder.s"
 .PHONY : help
 
 

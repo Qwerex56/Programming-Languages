@@ -5,12 +5,12 @@
 #include "../headers/NthBaseNumber.h"
 
 NthBaseNumber::NthBaseNumber(int64_t init, const std::shared_ptr<NumberCoder> &nc) {
-    _spNumberCoder = nc ? nc : std::make_shared<UBaseCoder<10>>();
-    _number = (*_spNumberCoder)(init);
+    _numberCoder = nc ? nc : std::make_shared<UBaseCoder>(NATURAL_SYSTEM);
+    _number = (*_numberCoder)(init);
 }
 
 NthBaseNumber::NthBaseNumber(std::vector<uint8_t> &init, bool isReversed, const std::shared_ptr<NumberCoder> &nc) {
-    _spNumberCoder = nc ? nc : std::make_shared<UBaseCoder<10>>();
+    _numberCoder = nc ? nc : std::make_shared<UBaseCoder>(NATURAL_SYSTEM);
     if (!isReversed) {
         std::reverse(init.begin(), init.end());
     }
@@ -18,11 +18,21 @@ NthBaseNumber::NthBaseNumber(std::vector<uint8_t> &init, bool isReversed, const 
 }
 
 NthBaseNumber::NthBaseNumber(std::vector<uint8_t> &&init, bool isReversed, const std::shared_ptr<NumberCoder> &nc) {
-    _spNumberCoder = nc ? nc : std::make_shared<UBaseCoder<10>>();
+    _numberCoder = nc ? nc : std::make_shared<UBaseCoder>(NATURAL_SYSTEM);
     if (!isReversed) {
         std::reverse(init.begin(), init.end());
     }
     _number = std::move(init);
+}
+
+NthBaseNumber& NthBaseNumber::operator =(const NthBaseNumber &other) {
+    if (this == &other)
+        return *this;
+
+    this->_numberCoder = other._numberCoder;
+    this->_number = CodedNumber(other._number);
+
+    return *this;
 }
 
 NthBaseNumber::NthBaseNumber(const NthBaseNumber &other) {
@@ -30,18 +40,27 @@ NthBaseNumber::NthBaseNumber(const NthBaseNumber &other) {
         return;
     }
 
-    this->_spNumberCoder = other._spNumberCoder;
-    std::copy(other._number.begin(), other._number.end(), this->_number.begin());
+    this->_numberCoder = other._numberCoder;
+    this->_number = CodedNumber(other._number);
+}
+
+NthBaseNumber::NthBaseNumber(const NthBaseNumber &&other) noexcept {
+    if (this == &other) {
+        return;
+    }
+
+    this->_numberCoder = other._numberCoder;
+    this->_number = CodedNumber(other._number);
 }
 
 [[maybe_unused]]
 void NthBaseNumber::ChangeBase(const std::shared_ptr<NumberCoder> &newNc) {
-    int64_t numberCache = (*_spNumberCoder)(_number);
+    int64_t numberCache = (*_numberCoder)(_number);
     _number.clear();
 
-    this->_spNumberCoder = newNc;
+    this->_numberCoder = newNc;
 
-    _number = (*_spNumberCoder)(numberCache);
+    _number = (*_numberCoder)(numberCache);
 }
 
 bool NthBaseNumber::isNegative(const NthBaseNumber &what) noexcept {
@@ -67,83 +86,66 @@ std::ostream &operator <<(std::ostream &os, NthBaseNumber &number) {
     return os;
 }
 
-NthBaseNumber &NthBaseNumber::operator =(const NthBaseNumber &other) {
-    if (this == &other)
-        return *this;
-
-    auto otherNumber = (*other._spNumberCoder)(other._number);
-    this->_number = (*other._spNumberCoder)(otherNumber);
-    this->_spNumberCoder = other._spNumberCoder;
-
-    return *this;
-}
-
-NthBaseNumber NthBaseNumber::operator +(NthBaseNumber &other) {
-    const auto thisBase = this->_spNumberCoder->getBase();
-    const auto otherBase = other._spNumberCoder->getBase();
+NthBaseNumber& NthBaseNumber::operator +=(NthBaseNumber &other) {
+    const auto thisBase = this->_numberCoder->getBase();
+    const auto otherBase = other._numberCoder->getBase();
 
     if (thisBase != otherBase) {
-        other.ChangeBase(this->_spNumberCoder);
+        other.ChangeBase(this->_numberCoder);
     }
 
     // Makes sure that both of the vectors are same size
     EqualizeLength(this->_number, other._number, thisBase);
 
-    auto sum = std::make_shared<CodedNumber>();
     auto carry = uint8_t { 0 };
 
     for (int i = 0; i < this->_number.size(); i++) {
-        const auto num1 = this->_number[i];
-        const auto num2 = other._number[i];
+        auto &num1 = this->_number[i];
+        const auto &num2 = other._number[i];
 
-        uint8_t smallSum = num1 + num2 + carry;
+        num1 += num2 + carry;
 
-        if (smallSum >= thisBase) {
+        if (num1 >= thisBase) {
             carry = 1;
-            smallSum -= thisBase;
+            num1 -= thisBase;
         }
         else {
             carry = 0;
         }
-
-        sum->push_back(smallSum);
     }
-
-    auto retSum = NthBaseNumber(*sum, true, this->_spNumberCoder);
 
     ShrinkLength(this->_number, thisBase);
     ShrinkLength(other._number, otherBase);
-    ShrinkLength(retSum._number, retSum.getBase());
 
-    return retSum;
+    return *this;
 }
 
-NthBaseNumber NthBaseNumber::operator -(NthBaseNumber &other) {
-    return operator+(other.negate());
+NthBaseNumber& NthBaseNumber::operator -=(NthBaseNumber &other) {
+    return operator+=(other.negate());
 }
 
-NthBaseNumber NthBaseNumber::operator*(NthBaseNumber &other) {
-    const auto thisBase = this->_spNumberCoder->getBase();
-    const auto otherBase = other._spNumberCoder->getBase();
+NthBaseNumber& NthBaseNumber::operator *=(NthBaseNumber &other) {
+    const auto thisBase = this->_numberCoder->getBase();
+    const auto otherBase = other._numberCoder->getBase();
 
     if (thisBase != otherBase) {
-        other.ChangeBase(this->_spNumberCoder);
+        other.ChangeBase(this->_numberCoder);
     }
 
     auto additionalZeros = 0;
 
-    auto multiple = NthBaseNumber(0, this->_spNumberCoder);
+    auto multiple = NthBaseNumber(0, this->_numberCoder);
 
-    auto sum = NthBaseNumber(0, this->_spNumberCoder);
+    auto sum = NthBaseNumber(0, this->_numberCoder);
 
     for (const auto &factorNum2 : other._number) {
         auto carry = 0;
-        multiple = NthBaseNumber(0, this->_spNumberCoder);
+        multiple = NthBaseNumber(0, this->_numberCoder);
         multiple._number.insert(multiple._number.cbegin(), additionalZeros, 0);
 
         for (const auto &factorNum1 : this->_number) {
             auto smallSum = factorNum1 * factorNum2 + carry;
-            CodedNumber codedSmallSum = (*this->_spNumberCoder)(smallSum);
+            CodedNumber codedSmallSum = (*this->_numberCoder)(smallSum);
 
             if (smallSum > this->getBase()) {
                 carry = codedSmallSum.back();
@@ -160,11 +162,26 @@ NthBaseNumber NthBaseNumber::operator*(NthBaseNumber &other) {
         additionalZeros += 1;
     }
 
-    return sum;
+    return *this;
+}
+
+NthBaseNumber operator +(NthBaseNumber lhs, NthBaseNumber &rhs) {
+    lhs += rhs;
+    return lhs;
+}
+
+NthBaseNumber operator -(NthBaseNumber lhs, NthBaseNumber &rhs) {
+    lhs -= rhs;
+    return lhs;
+}
+
+NthBaseNumber operator *(NthBaseNumber lhs, NthBaseNumber &rhs) {
+    lhs *= rhs;
+    return lhs;
 }
 
 NthBaseNumber& NthBaseNumber::operator ++() {
-    auto inc = NthBaseNumber(1, std::shared_ptr<NumberCoder>(this->_spNumberCoder));
+    auto inc = NthBaseNumber(1, std::shared_ptr<NumberCoder>(this->_numberCoder));
     *this = *this + inc;
     return *this;
 }
@@ -285,7 +302,7 @@ inline void NthBaseNumber::ShrinkLength(std::vector<uint8_t> &rhs, int const bas
 void NthBaseNumber::PushCarryOver(NthBaseNumber &where, int carry) {
     auto &number = where._number;
 
-    auto codedCarry = (*where._spNumberCoder)(carry);
+    auto codedCarry = (*where._numberCoder)(carry);
     if (*codedCarry.crbegin() == 0) {
         codedCarry.erase(codedCarry.cend());
     }
