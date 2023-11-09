@@ -53,7 +53,7 @@ public class NthBaseNumber {
             other.changeBase(_numberCoder);
         }
 
-        equalizeLength(_number, other._number, thisBase);
+        equalizeLength(_number, other._number, (byte) thisBase);
 
         int carry = 0;
 
@@ -73,8 +73,8 @@ public class NthBaseNumber {
             _number.set(i, num1);
         }
 
-        shrinkLength(_number, thisBase);
-        shrinkLength(other._number, otherBase);
+        shrinkLength(_number, (byte) thisBase);
+        shrinkLength(other._number, (byte) otherBase);
 
         return this;
     }
@@ -150,7 +150,7 @@ public class NthBaseNumber {
         boolean areBothNegative = isNegative() && other.isNegative();
 
         if (thisSign != otherSign) {
-            return thisSign && !otherSign;
+            return thisSign;
         }
 
         if (_number.size() < other._number.size()) {
@@ -215,7 +215,92 @@ public class NthBaseNumber {
     private boolean isNegative(NthBaseNumber what) {
         byte signBit = what._number.get(what._number.size() - 1);
         int base = what._numberCoder.getBase();
-        return getSignBit(signBit, base) > 0;
+        return getSignBit(signBit, (byte) base) > 0;
+    }
+
+    public static List<Byte> negate(List<Byte> numToNegate, byte base) {
+        List<Byte> negative = new ArrayList<>(numToNegate.size());
+        int carry = 1;
+        equalizeLength(numToNegate, negative, base);
+
+        for (int i = 0; i < negative.size(); i++) {
+            negative.set(i, (byte) (negative.get(i) - numToNegate.get(i)));
+        }
+
+        for (int i = 0; i < negative.size(); i++) {
+            int mag = negative.get(i) + carry;
+            if (mag >= base) {
+                mag -= base;
+                carry = 1;
+            } else {
+                carry = 0;
+            }
+            negative.set(i, (byte) mag);
+        }
+
+        shrinkLength(negative, base);
+        return negative;
+    }
+
+    public static void equalizeLength(List<Byte> lhs, List<Byte> rhs, byte base) {
+        int lenDiff = Math.abs(lhs.size() - rhs.size()) + 1;
+
+        if (lhs.size() < rhs.size()) {
+            for (int i = 0; i < lenDiff; i++) {
+                lhs.add(NthBaseNumber.getSignBit(lhs.get(lhs.size() - 1), base));
+            }
+            rhs.add(NthBaseNumber.getSignBit(rhs.get(rhs.size() - 1), base));
+        } else {
+            for (int i = 0; i < lenDiff; i++) {
+                rhs.add(NthBaseNumber.getSignBit(rhs.get(rhs.size() - 1), base));
+            }
+            lhs.add(NthBaseNumber.getSignBit(lhs.get(lhs.size() - 1), base));
+        }
+    }
+
+    public static void shrinkLength(List<Byte> rhs, byte base) {
+        int what = base / 2;
+
+        java.util.function.Predicate<Integer> biggerEqual = i -> i >= what;
+        java.util.function.Predicate<Integer> smaller = i -> !biggerEqual.test(i);
+
+        java.util.function.Consumer<List<Byte>> shrink = vec -> {
+            int posToDel = 1;
+
+            if (biggerEqual.test(Integer.valueOf(vec.get(vec.size() - 1)))) {
+                while (vec.get(vec.size() - posToDel) == base - 1) {
+                    posToDel++;
+                }
+            } else {
+                while (vec.get(vec.size() - posToDel) == 0) {
+                    posToDel++;
+                }
+            }
+
+            posToDel -= 2;
+
+            for (int i = 0; i < posToDel; i++) {
+                vec.remove(vec.size() - 1);
+            }
+        };
+
+        shrink.accept(rhs);
+    }
+
+    public static void pushCarryOver(NthBaseNumber where, int carry) {
+        List<Byte> number = where._number;
+
+        List<Byte> codedCarry = where._numberCoder.codeNumber(carry);
+
+        if (codedCarry.get(codedCarry.size() - 1) == 0) {
+            codedCarry.remove(codedCarry.size() - 1);
+        }
+
+        number.addAll(codedCarry);
+    }
+
+    public static byte getSignBit(byte sign, byte base) {
+        return sign >= (base / 2) ? sign : 0;
     }
 }
 

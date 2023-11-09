@@ -254,6 +254,31 @@ bool NthBaseNumber::operator >=(const NthBaseNumber &other) const {
     return !(*this < other);
 }
 
+CodedNumber NthBaseNumber::negate(std::vector<uint8_t> numToNegate, const int base) {
+    auto negative = CodedNumber(numToNegate.size(), base - 1);
+    auto carry = 1;
+    EqualizeLength(numToNegate, negative, base);
+
+    for (auto i = 0; i < negative.size(); i++) {
+        negative[i] -= numToNegate[i];
+    }
+
+    for (auto &mag : negative) {
+        mag += carry;
+        if (mag >= base) {
+            mag -= base;
+            carry = 1;
+        }
+        else {
+            carry = 0;
+        }
+    }
+
+    ShrinkLength(negative, base);
+    return negative;
+}
+
+/// Helps to determine if number is negative
 inline void NthBaseNumber::EqualizeLength(std::vector<uint8_t> &lhs, std::vector<uint8_t> &rhs, const int base) {
     auto lenDiff = abs(static_cast<int>(lhs.size() - rhs.size())) + 1;
     auto const once = 1;
@@ -264,8 +289,8 @@ inline void NthBaseNumber::EqualizeLength(std::vector<uint8_t> &lhs, std::vector
     };
 
     lhs.size() < rhs.size() ?
-        pushLength(lhs, rhs) :
-        pushLength(rhs, lhs);
+    pushLength(lhs, rhs) :
+    pushLength(rhs, lhs);
 }
 
 inline void NthBaseNumber::ShrinkLength(std::vector<uint8_t> &rhs, int const base) {
@@ -310,34 +335,9 @@ void NthBaseNumber::PushCarryOver(NthBaseNumber &where, int carry) {
 }
 
 /// Returns base - 1 if number is negative, 0 otherwise
-/// Helps to determine if number is negative
 uint8_t NthBaseNumber::getSignBit(const uint8_t &sign, const int base) {
     auto result = sign >= (base / 2) ?
-            sign :
-            0;
+                  sign :
+                  0;
     return result;
-}
-
-CodedNumber NthBaseNumber::negate(std::vector<uint8_t> numToNegate, const int base) {
-    auto negative = CodedNumber(numToNegate.size(), base - 1);
-    auto carry = 1;
-    EqualizeLength(numToNegate, negative, base);
-
-    for (auto i = 0; i < negative.size(); i++) {
-        negative[i] -= numToNegate[i];
-    }
-
-    for (auto &mag : negative) {
-        mag += carry;
-        if (mag >= base) {
-            mag -= base;
-            carry = 1;
-        }
-        else {
-            carry = 0;
-        }
-    }
-
-    ShrinkLength(negative, base);
-    return negative;
 }

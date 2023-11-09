@@ -56,8 +56,8 @@ public class UBaseCoder implements NumberCoder {
     }
 
     @Override
-    public int getBase() {
-        return base;
+    public byte getBase() {
+        return (byte) base;
     }
 
     private void convertToNeg(List<Byte> number) {
