@@ -19,10 +19,13 @@
 class NthBaseNumber {
 public:
     explicit NthBaseNumber(int64_t init = 0, const std::shared_ptr<NumberCoder> &nc = nullptr);
-    explicit NthBaseNumber(CodedNumber &init, bool isReversed = false, const std::shared_ptr<NumberCoder> &nc = nullptr);
+
+    [[maybe_unused]] explicit NthBaseNumber(CodedNumber &init, bool isReversed = false, const std::shared_ptr<NumberCoder> &nc = nullptr);
     explicit NthBaseNumber(CodedNumber &&init, bool isReversed = false, const std::shared_ptr<NumberCoder> &nc = nullptr);
-    NthBaseNumber(const NthBaseNumber &other);
-    NthBaseNumber(const NthBaseNumber &&other) noexcept;
+
+    [[maybe_unused]] NthBaseNumber(const NthBaseNumber &other);
+
+    [[maybe_unused]] NthBaseNumber(const NthBaseNumber &&other) noexcept;
     NthBaseNumber& operator =(const NthBaseNumber &other);
 
     [[maybe_unused]]

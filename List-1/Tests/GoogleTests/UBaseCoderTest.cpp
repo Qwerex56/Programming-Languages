@@ -6,7 +6,7 @@
 #include "UBaseCoder.h"
 
 TEST(UBaseCoderTest, TwoComplementTest) {
-    auto uTwoNumber = UBaseCoder<2>();
+    auto uTwoNumber = UBaseCoder(2);
     auto testDataPositive = 2ll;
     auto testDataNegative = -2ll;
     auto testDataCoded = CodedNumber({0, 1, 0});

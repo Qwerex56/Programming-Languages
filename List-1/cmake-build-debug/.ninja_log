@@ -1,3 +1,27 @@
 # ninja log v5
+1	667	1700477048100474129	CMakeFiles/NthBaseCalculator_run.dir/main.cpp.o	f80d4896f7614e91
+5662	5738	1700472032352956935	lib/libgtest.a	704fab7c184294ba
+1	1171	1700472059785233219	Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.o	9b411377225cf0c
+22	1797	1700472028417917303	Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	5c3c09cf61698374
 0	25	1699525233552138182	build.ninja	7e536bf6287f4def
+3	1692	1700473535843099591	NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o	ccff2f45ea24f7c6
+1	786	1700477144943449507	NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o	60c3a65f58c0ded0
+3	2133	1700472028752920677	Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.o	d73a0483e0f7ad10
 1990	2134	1698873645746116750	List_1	1d5e59ffa0b7924f
+832	884	1700477145041450494	NthBaseCalculator_run	7a67f1c7dafea719
+5	5662	1700472032274956149	Tests/GoogleTests/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	518c4788a2beaa60
+777	882	1700472836064051637	Tests/GoogleTests/Google_Tests_run	c69032957dfed869
+787	832	1700477144985449930	NthBaseCalculatorLib/libNthBaseCalculatorLib.a	e843edbd44cdaa1
+5738	5763	1700472032382957237	lib/libgtest_main.a	312d6414c271b388
+1	890	1700478640761514988	NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o	60c3a65f58c0ded0
+891	930	1700478640797515350	NthBaseCalculatorLib/libNthBaseCalculatorLib.a	e843edbd44cdaa1
+930	984	1700478640854515924	NthBaseCalculator_run	7a67f1c7dafea719
+1	628	1700478651689625061	CMakeFiles/NthBaseCalculator_run.dir/main.cpp.o	f80d4896f7614e91
+628	677	1700478651737625544	NthBaseCalculator_run	7a67f1c7dafea719
+1	602	1700478658968698374	CMakeFiles/NthBaseCalculator_run.dir/main.cpp.o	f80d4896f7614e91
+602	652	1700478659016698857	NthBaseCalculator_run	7a67f1c7dafea719
+1	615	1700478860751730708	CMakeFiles/NthBaseCalculator_run.dir/main.cpp.o	f80d4896f7614e91
+615	666	1700478860800731201	NthBaseCalculator_run	7a67f1c7dafea719
+1	791	1700479266540817741	NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o	60c3a65f58c0ded0
+791	828	1700479266575818094	NthBaseCalculatorLib/libNthBaseCalculatorLib.a	e843edbd44cdaa1
+828	881	1700479266628818628	NthBaseCalculator_run	7a67f1c7dafea719

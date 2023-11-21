@@ -9,6 +9,7 @@ NthBaseNumber::NthBaseNumber(int64_t init, const std::shared_ptr<NumberCoder> &n
     _number = (*_numberCoder)(init);
 }
 
+[[maybe_unused]]
 NthBaseNumber::NthBaseNumber(std::vector<uint8_t> &init, bool isReversed, const std::shared_ptr<NumberCoder> &nc) {
     _numberCoder = nc ? nc : std::make_shared<UBaseCoder>(NATURAL_SYSTEM);
     if (!isReversed) {
@@ -35,6 +36,7 @@ NthBaseNumber& NthBaseNumber::operator =(const NthBaseNumber &other) {
     return *this;
 }
 
+[[maybe_unused]]
 NthBaseNumber::NthBaseNumber(const NthBaseNumber &other) {
     if (this == &other) {
         return;
@@ -44,6 +46,7 @@ NthBaseNumber::NthBaseNumber(const NthBaseNumber &other) {
     this->_number = CodedNumber(other._number);
 }
 
+[[maybe_unused]]
 NthBaseNumber::NthBaseNumber(const NthBaseNumber &&other) noexcept {
     if (this == &other) {
         return;
@@ -70,6 +73,9 @@ bool NthBaseNumber::isNegative(const NthBaseNumber &what) noexcept {
 }
 
 std::ostream &operator <<(std::ostream &os, NthBaseNumber &number) {
+    auto foo = (*number._numberCoder)(number._number);
+    std::cout << foo << ": ";
+
     std::reverse(number._number.begin(), number._number.end());
 
     for (auto &frag : number._number) {
@@ -128,39 +134,49 @@ NthBaseNumber& NthBaseNumber::operator *=(NthBaseNumber &other) {
     const auto thisBase = this->_numberCoder->getBase();
     const auto otherBase = other._numberCoder->getBase();
 
+    this->_number.insert(this->_number.cend(), 2, this->_number.back());
+
     if (thisBase != otherBase) {
         other.ChangeBase(this->_numberCoder);
     }
 
     auto additionalZeros = 0;
 
-    auto multiple = NthBaseNumber(0, this->_numberCoder);
-
     auto sum = NthBaseNumber(0, this->_numberCoder);
 
     for (const auto &factorNum2 : other._number) {
         auto carry = 0;
+        auto multiple = NthBaseNumber(0, this->_numberCoder);
+
         multiple = NthBaseNumber(0, this->_numberCoder);
-        multiple._number.insert(multiple._number.cbegin(), additionalZeros, 0);
+        multiple._number.clear();
+
+        multiple._number.insert(multiple._number.cbegin(), additionalZeros++, 0);
 
         for (const auto &factorNum1 : this->_number) {
-            auto smallSum = factorNum1 * factorNum2 + carry;
-            CodedNumber codedSmallSum = (*this->_numberCoder)(smallSum);
+            auto partialSum = factorNum1 * factorNum2 + carry;
 
-            if (smallSum > this->getBase()) {
-                carry = codedSmallSum.back();
-                multiple._number.push_back(codedSmallSum.front());
+            if (partialSum >= this->getBase()) {
+                carry = partialSum / thisBase;
+                multiple._number.push_back(partialSum % thisBase);
             }
             else {
-                multiple._number.push_back(smallSum);
+                multiple._number.push_back(partialSum);
                 carry = 0;
             }
         }
 
-        PushCarryOver(multiple, carry);
-        sum = sum + multiple;
-        additionalZeros += 1;
+        sum += multiple;
     }
+
+    if (other.isNegative()) {
+        auto addNeg = this->getNegate();
+        addNeg._number.insert(addNeg._number.cbegin(), additionalZeros, 0);
+
+        sum += addNeg;
+    }
+
+    *this = sum;
 
     return *this;
 }
@@ -283,7 +299,7 @@ inline void NthBaseNumber::EqualizeLength(std::vector<uint8_t> &lhs, std::vector
     auto lenDiff = abs(static_cast<int>(lhs.size() - rhs.size())) + 1;
     auto const once = 1;
 
-    auto pushLength = [&lenDiff, &once, &base](CodedNumber &smaller, CodedNumber &bigger) -> void {
+    auto pushLength = [&lenDiff, &base](CodedNumber &smaller, CodedNumber &bigger) -> void {
         smaller.insert(smaller.cend(), lenDiff, NthBaseNumber::getSignBit(*smaller.crbegin(), base));
         bigger.insert(bigger.cend(), once, NthBaseNumber::getSignBit(*bigger.crbegin(), base));
     };
@@ -298,11 +314,8 @@ inline void NthBaseNumber::ShrinkLength(std::vector<uint8_t> &rhs, int const bas
     auto const biggerEqual = [&what](int i) {
         return i >= what;
     };
-    auto const smaller = [&biggerEqual](int i) {
-        return !biggerEqual(i);
-    };
 
-    auto const shrink = [&biggerEqual, &smaller, &base](CodedNumber &vec) {
+    auto const shrink = [&biggerEqual, &base](CodedNumber &vec) {
         auto posToDel = 1;
 
         if (biggerEqual(*vec.crbegin())) {
