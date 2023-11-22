@@ -43,6 +43,12 @@ public:
     }
 
     [[maybe_unused]]
+    [[nodiscard]]
+    inline bool isPositive() const {
+        return *this >= NthBaseNumber(0, this->_numberCoder);
+    }
+
+    [[maybe_unused]]
     inline NthBaseNumber& negate() noexcept {
         this->_number = negate(this->_number, this->getBase());
         return *this;
@@ -53,6 +59,12 @@ public:
     inline NthBaseNumber getNegate() const noexcept {
         auto negative = NthBaseNumber(negate(this->_number, this->getBase()), true, this->_numberCoder);
         return negative;
+    }
+
+    [[maybe_unused]]
+    [[nodiscard]]
+    inline NthBaseNumber getPositive() const noexcept {
+        return isPositive()? *this : this->getNegate();
     }
 
     NthBaseNumber& operator +=(NthBaseNumber &other);
@@ -81,14 +93,21 @@ public:
 
     [[maybe_unused]]
     static inline bool isNegative(const NthBaseNumber &what) noexcept;
+
+    static std::tuple<NthBaseNumber, NthBaseNumber> slowDivision(const NthBaseNumber &lhs, const NthBaseNumber &rhs);
 private:
     std::shared_ptr<NumberCoder> _numberCoder;
     CodedNumber _number;
 
-    static void EqualizeLength(CodedNumber &lhs, CodedNumber &rhs, int base);
-    static void ShrinkLength(CodedNumber &toShrink, int base);
-    static void PushCarryOver(NthBaseNumber &where, int carry = 0);
+    static void equalizeLength(CodedNumber &lhs, CodedNumber &rhs, int base);
+
+    static void shrinkLength(CodedNumber &toShrink, int base);
+
+    [[maybe_unused]]
+    static void pushCarryOver(NthBaseNumber &where, int carry = 0);
+
     static uint8_t getSignBit(const uint8_t &sign, int base);
+
     static CodedNumber negate(CodedNumber numToNegate, int base);
 };
 

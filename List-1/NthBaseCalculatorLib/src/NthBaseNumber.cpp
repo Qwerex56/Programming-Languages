@@ -72,6 +72,41 @@ bool NthBaseNumber::isNegative(const NthBaseNumber &what) noexcept {
     return getSignBit(signBit, base);
 }
 
+/// Works very slowly
+std::tuple<NthBaseNumber, NthBaseNumber> NthBaseNumber::slowDivision(const NthBaseNumber &lhs,
+                                                                     const NthBaseNumber &rhs) {
+    decltype(auto) decoder = *lhs._numberCoder;
+    auto divident = decoder(rhs.getPositive()._number);
+    auto mem = NthBaseNumber(0, lhs._numberCoder)._number; mem.clear();
+
+    auto result = NthBaseNumber(0, lhs._numberCoder); result._number.clear();
+    auto &resultNum = result._number;
+
+    auto divide = [&]() {
+        auto partQuot = decoder(mem) / divident;
+        auto remainder = decoder(mem) % divident;
+
+        mem.clear(); mem.insert(mem.begin(), remainder);
+        resultNum.push_back(partQuot);
+    };
+
+    std::for_each(lhs._number.crbegin(), lhs._number.crend(), [&](auto const &item) {
+        mem.insert(mem.begin(), item);
+
+        if (decoder(mem) >= divident) {
+            divide();
+        }
+    });
+
+    divide();
+    auto modulo = NthBaseNumber(decoder(mem), lhs._numberCoder);
+
+    result = ((lhs.isPositive() && rhs.isPositive() ||
+               lhs.isNegative() && rhs.isPositive()))? result : result.getNegate();
+
+    return {result, modulo};
+}
+
 std::ostream &operator <<(std::ostream &os, NthBaseNumber &number) {
     auto foo = (*number._numberCoder)(number._number);
     std::cout << foo << ": ";
@@ -101,7 +136,7 @@ NthBaseNumber& NthBaseNumber::operator +=(NthBaseNumber &other) {
     }
 
     // Makes sure that both of the vectors are same size
-    EqualizeLength(this->_number, other._number, thisBase);
+    equalizeLength(this->_number, other._number, thisBase);
 
     auto carry = uint8_t { 0 };
 
@@ -120,8 +155,8 @@ NthBaseNumber& NthBaseNumber::operator +=(NthBaseNumber &other) {
         }
     }
 
-    ShrinkLength(this->_number, thisBase);
-    ShrinkLength(other._number, otherBase);
+    shrinkLength(this->_number, thisBase);
+    shrinkLength(other._number, otherBase);
 
     return *this;
 }
@@ -270,32 +305,8 @@ bool NthBaseNumber::operator >=(const NthBaseNumber &other) const {
     return !(*this < other);
 }
 
-CodedNumber NthBaseNumber::negate(std::vector<uint8_t> numToNegate, const int base) {
-    auto negative = CodedNumber(numToNegate.size(), base - 1);
-    auto carry = 1;
-    EqualizeLength(numToNegate, negative, base);
-
-    for (auto i = 0; i < negative.size(); i++) {
-        negative[i] -= numToNegate[i];
-    }
-
-    for (auto &mag : negative) {
-        mag += carry;
-        if (mag >= base) {
-            mag -= base;
-            carry = 1;
-        }
-        else {
-            carry = 0;
-        }
-    }
-
-    ShrinkLength(negative, base);
-    return negative;
-}
-
 /// Helps to determine if number is negative
-inline void NthBaseNumber::EqualizeLength(std::vector<uint8_t> &lhs, std::vector<uint8_t> &rhs, const int base) {
+inline void NthBaseNumber::equalizeLength(std::vector<uint8_t> &lhs, std::vector<uint8_t> &rhs, int base) {
     auto lenDiff = abs(static_cast<int>(lhs.size() - rhs.size())) + 1;
     auto const once = 1;
 
@@ -309,7 +320,7 @@ inline void NthBaseNumber::EqualizeLength(std::vector<uint8_t> &lhs, std::vector
     pushLength(rhs, lhs);
 }
 
-inline void NthBaseNumber::ShrinkLength(std::vector<uint8_t> &rhs, int const base) {
+inline void NthBaseNumber::shrinkLength(std::vector<uint8_t> &toShrink, int base) {
     auto const what = base / 2;
     auto const biggerEqual = [&what](int i) {
         return i >= what;
@@ -334,10 +345,11 @@ inline void NthBaseNumber::ShrinkLength(std::vector<uint8_t> &rhs, int const bas
         }
     };
 
-    shrink(rhs);
+    shrink(toShrink);
 }
 
-void NthBaseNumber::PushCarryOver(NthBaseNumber &where, int carry) {
+[[maybe_unused]]
+void NthBaseNumber::pushCarryOver(NthBaseNumber &where, int carry) {
     auto &number = where._number;
 
     auto codedCarry = (*where._numberCoder)(carry);
@@ -353,4 +365,28 @@ uint8_t NthBaseNumber::getSignBit(const uint8_t &sign, const int base) {
                   sign :
                   0;
     return result;
+}
+
+CodedNumber NthBaseNumber::negate(std::vector<uint8_t> numToNegate, const int base) {
+    auto negative = CodedNumber(numToNegate.size(), base - 1);
+    auto carry = 1;
+    equalizeLength(numToNegate, negative, base);
+
+    for (auto i = 0; i < negative.size(); i++) {
+        negative[i] -= numToNegate[i];
+    }
+
+    for (auto &mag : negative) {
+        mag += carry;
+        if (mag >= base) {
+            mag -= base;
+            carry = 1;
+        }
+        else {
+            carry = 0;
+        }
+    }
+
+    shrinkLength(negative, base);
+    return negative;
 }
