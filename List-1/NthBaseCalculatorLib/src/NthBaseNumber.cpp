@@ -72,7 +72,8 @@ bool NthBaseNumber::isNegative(const NthBaseNumber &what) noexcept {
     return getSignBit(signBit, base);
 }
 
-/// Works very slowly
+/// Works very slowly,
+/// Limited to positive integers
 std::tuple<NthBaseNumber, NthBaseNumber> NthBaseNumber::slowDivision(const NthBaseNumber &lhs,
                                                                      const NthBaseNumber &rhs) {
     decltype(auto) decoder = *lhs._numberCoder;
@@ -86,24 +87,18 @@ std::tuple<NthBaseNumber, NthBaseNumber> NthBaseNumber::slowDivision(const NthBa
         auto partQuot = decoder(mem) / divident;
         auto remainder = decoder(mem) % divident;
 
-        mem.clear(); mem.insert(mem.begin(), remainder);
-        resultNum.push_back(partQuot);
+        mem.clear();
+        mem.insert(mem.begin(), remainder);
+
+        resultNum.insert(result._number.begin(), partQuot);
     };
 
     std::for_each(lhs._number.crbegin(), lhs._number.crend(), [&](auto const &item) {
         mem.insert(mem.begin(), item);
-
-        if (decoder(mem) >= divident) {
-            divide();
-        }
+        divide();
     });
 
-    divide();
     auto modulo = NthBaseNumber(decoder(mem), lhs._numberCoder);
-
-    result = ((lhs.isPositive() && rhs.isPositive() ||
-               lhs.isNegative() && rhs.isPositive()))? result : result.getNegate();
-
     return {result, modulo};
 }
 
