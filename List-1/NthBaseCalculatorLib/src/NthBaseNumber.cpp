@@ -74,31 +74,42 @@ bool NthBaseNumber::isNegative(const NthBaseNumber &what) noexcept {
 
 /// Works very slowly,
 /// Limited to positive integers
-std::tuple<NthBaseNumber, NthBaseNumber> NthBaseNumber::slowDivision(const NthBaseNumber &lhs,
-                                                                     const NthBaseNumber &rhs) {
-    decltype(auto) decoder = *lhs._numberCoder;
-    auto divident = decoder(rhs.getPositive()._number);
-    auto mem = NthBaseNumber(0, lhs._numberCoder)._number; mem.clear();
+std::tuple<NthBaseNumber, NthBaseNumber> NthBaseNumber::slowDivision(NthBaseNumber &lhs,
+                                                                     NthBaseNumber &rhs) {
+    auto mem = NthBaseNumber(0, lhs._numberCoder); mem._number.clear();
 
     auto result = NthBaseNumber(0, lhs._numberCoder); result._number.clear();
     auto &resultNum = result._number;
 
     auto divide = [&]() {
-        auto partQuot = decoder(mem) / divident;
-        auto remainder = decoder(mem) % divident;
+        auto partQuot = NthBaseNumber(0, lhs._numberCoder);
+        auto remainder = NthBaseNumber(0, lhs._numberCoder);
 
-        mem.clear();
-        mem.insert(mem.begin(), remainder);
+        for (int i = 0; i < lhs.getBase(); i++) {
+            auto factor = NthBaseNumber(i, lhs._numberCoder);
+            auto part = rhs * factor;
 
-        resultNum.insert(result._number.begin(), partQuot);
+            shrinkLength(mem._number, mem.getBase());
+            if (mem < part) {
+                partQuot = NthBaseNumber(--i, lhs._numberCoder);
+                break;
+            }
+        }
+
+        remainder = (rhs * partQuot).getNegate() + mem;
+
+        mem._number.clear(); mem._number.push_back(0);
+        mem._number.insert(mem._number.begin(), remainder._number.front());
+
+        resultNum.insert(result._number.begin(), partQuot._number.front());
     };
 
     std::for_each(lhs._number.crbegin(), lhs._number.crend(), [&](auto const &item) {
-        mem.insert(mem.begin(), item);
+        mem._number.insert(mem._number.begin(), item);
         divide();
     });
 
-    auto modulo = NthBaseNumber(decoder(mem), lhs._numberCoder);
+    auto modulo = mem;
     return {result, modulo};
 }
 
@@ -161,6 +172,11 @@ NthBaseNumber& NthBaseNumber::operator -=(NthBaseNumber &other) {
 }
 
 NthBaseNumber& NthBaseNumber::operator *=(NthBaseNumber &other) {
+    if (other == NthBaseNumber(0, other._numberCoder) || *this == NthBaseNumber(0, other._numberCoder)) {
+        *this = NthBaseNumber(0, other._numberCoder);
+        return *this;
+    }
+
     const auto thisBase = this->_numberCoder->getBase();
     const auto otherBase = other._numberCoder->getBase();
 
@@ -277,12 +293,19 @@ bool NthBaseNumber::operator <(const NthBaseNumber &other) const {
     auto oIt = other._number.crbegin();
 
     while (it != this->_number.crend()) {
+        if (*it == *oIt) {
+            it++;
+            oIt++;
+            continue;
+        }
+
         if (*it < *oIt) {
             return true;
         }
 
-        it++;
-        oIt++;
+        if (*it > *oIt) {
+            return false;
+        }
     }
 
     return false;
@@ -330,7 +353,7 @@ inline void NthBaseNumber::shrinkLength(std::vector<uint8_t> &toShrink, int base
             }
         }
         else {
-            while (vec[vec.size() - posToDel] == 0) {
+            while (vec[vec.size() - posToDel] == 0 && vec.size() - posToDel > 0) {
                 posToDel++;
             }
         }

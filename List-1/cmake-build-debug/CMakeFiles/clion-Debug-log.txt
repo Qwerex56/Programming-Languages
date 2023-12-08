@@ -11,10 +11,7 @@
 -- Check for working CXX compiler: /usr/bin/c++ - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Found Python3: /usr/bin/python3.11 (found version "3.11.6") found components: Interpreter 
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
--- Found Threads: TRUE  
--- Configuring done (1.8s)
+-- Found Python3: /usr/bin/python3.12 (found version "3.12.0") found components: Interpreter 
+-- Configuring done (0.9s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug

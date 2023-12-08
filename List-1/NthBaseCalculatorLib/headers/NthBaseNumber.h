@@ -94,7 +94,7 @@ public:
     [[maybe_unused]]
     static inline bool isNegative(const NthBaseNumber &what) noexcept;
 
-    static std::tuple<NthBaseNumber, NthBaseNumber> slowDivision(const NthBaseNumber &lhs, const NthBaseNumber &rhs);
+    static std::tuple<NthBaseNumber, NthBaseNumber> slowDivision(NthBaseNumber &lhs, NthBaseNumber &rhs);
 private:
     std::shared_ptr<NumberCoder> _numberCoder;
     CodedNumber _number;

@@ -31,7 +31,7 @@ CMAKE_BUILD_TYPE:STRING=Debug
 CMAKE_COLOR_DIAGNOSTICS:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
+CMAKE_CXX_COMPILER:STRING=/usr/bin/c++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -272,6 +272,9 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Path to a program.
 CMAKE_STRIP:FILEPATH=/usr/bin/strip
 
+//Path to a program.
+CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
+
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
 // during the make.  This is useful for debugging only. With Visual
@@ -373,9 +376,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/home/adrianczubaty/Dokumenty/Programming-Languages
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=26
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=27
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=4
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=0
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake
 //Path to cpack program executable.
@@ -506,7 +509,7 @@ CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_READELF
 CMAKE_READELF-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26
+CMAKE_ROOT:INTERNAL=/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.27
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
@@ -533,12 +536,14 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_STRIP
 CMAKE_STRIP-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_TAPI
+CMAKE_TAPI-ADVANCED:INTERNAL=1
 //uname command
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3.11][cfound components: Interpreter ][v3.11.6()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3.12][cfound components: Interpreter ][v3.12.0()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //linker supports push/pop state
@@ -550,10 +555,10 @@ _Python3_Compiler_REASON_FAILURE:INTERNAL=
 //Development reason failure
 _Python3_Development_REASON_FAILURE:INTERNAL=
 //Path to a program.
-_Python3_EXECUTABLE:INTERNAL=/usr/bin/python3.11
+_Python3_EXECUTABLE:INTERNAL=/usr/bin/python3.12
 //Python3 Properties
-_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;11;6;64;;cpython-311-x86_64-linux-gnu;abi3;/usr/lib64/python3.11;/usr/lib64/python3.11;/usr/lib/python3.11/site-packages;/usr/lib64/python3.11/site-packages
-_Python3_INTERPRETER_SIGNATURE:INTERNAL=c5ea8e56613f13ab5e55239a52af8d00
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;0;64;32;;cpython-312-x86_64-linux-gnu;abi3;/usr/lib64/python3.12;/usr/local/lib64/python3.12;/usr/local/lib/python3.12/site-packages;/usr/local/lib64/python3.12/site-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=f811b8a062a8994e96ffe87747bf9bfe
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=
 cmake_package_name:INTERNAL=GTest

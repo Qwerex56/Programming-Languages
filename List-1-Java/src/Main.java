@@ -6,9 +6,11 @@ import NumberCoder.UBaseCoder;
 public class Main {
     public static void main(String[] args) {
         UBaseCoder code = new UBaseCoder(10);
-        NthBaseNumber num = new NthBaseNumber(10, code);
-        NthBaseNumber num2 = new NthBaseNumber(20, code);
 
-        System.out.println(num.add(num2).toString());
+        NthBaseNumber num = new NthBaseNumber(10, code);
+        NthBaseNumber num2 = new NthBaseNumber(9, code);
+
+        NthBaseNumber num3 = num.negate();
+        System.out.println(num3.toString());
     }
 }

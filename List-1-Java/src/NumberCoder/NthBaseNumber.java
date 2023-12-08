@@ -37,6 +37,7 @@ public class NthBaseNumber {
     }
 
     public NthBaseNumber negate() {
+        System.out.println(_number);
         List<Byte> negated = negate(_number, _numberCoder.getBase());
         return new NthBaseNumber(negated, false, _numberCoder);
     }
@@ -118,6 +119,59 @@ public class NthBaseNumber {
 
         _number = sum._number;
         return this;
+    }
+
+    public Tuple<NthBaseNumber, NthBaseNumber> slowDivision(NthBaseNumber lhs, NthBaseNumber rhs) {
+        NthBaseNumber mem = new NthBaseNumber(0, lhs._numberCoder);
+        mem._number = new ArrayList<>();
+
+        NthBaseNumber result = new NthBaseNumber(0, lhs._numberCoder);
+        result._number = new ArrayList<>();
+        List<Byte> resultNum = result._number;
+
+        Runnable divide = () -> {
+            NthBaseNumber partQuot = new NthBaseNumber(0, lhs._numberCoder);
+            NthBaseNumber remainder = new NthBaseNumber(0, lhs._numberCoder);
+
+            for (int i = 0; i < lhs._numberCoder.getBase(); i++) {
+                NthBaseNumber factor = new NthBaseNumber(i, lhs._numberCoder);
+                NthBaseNumber part = rhs.multiply(factor);
+
+                shrinkLength(mem._number, mem._numberCoder.getBase());
+                if (mem.lessThan(part)) {
+                    partQuot = new NthBaseNumber(--i, lhs._numberCoder);
+                    break;
+                }
+            }
+
+            remainder = mem.subtract(rhs.multiply(partQuot));
+
+            mem._number.clear();
+            mem._number.add((byte) 0);
+            mem._number.addAll(0, remainder._number.subList(0, 1));
+
+            resultNum.addAll(0, partQuot._number);
+        };
+
+        List<Byte> lhsNumbers = lhs._number;
+        Collections.reverse(lhsNumbers);
+        for (Byte item : lhsNumbers) {
+            mem._number.add(0, item);
+            divide.run();
+        }
+
+        NthBaseNumber modulo = mem;
+        return new Tuple<>(result, modulo);
+    }
+
+    public class Tuple<X, Y> {
+        public final X first;
+        public final Y second;
+
+        public Tuple(X first, Y second) {
+            this.first = first;
+            this.second = second;
+        }
     }
 
     public NthBaseNumber increment() {
@@ -219,7 +273,12 @@ public class NthBaseNumber {
     }
 
     public static List<Byte> negate(List<Byte> numToNegate, byte base) {
-        List<Byte> negative = new ArrayList<>(numToNegate.size());
+        List<Byte> negative = new ArrayList<Byte>();
+
+        for (int i = 0; i < numToNegate.size(); i++) {
+            negative.add((byte) (base - 1));
+        }
+
         int carry = 1;
         equalizeLength(numToNegate, negative, base);
 
@@ -227,15 +286,15 @@ public class NthBaseNumber {
             negative.set(i, (byte) (negative.get(i) - numToNegate.get(i)));
         }
 
-        for (int i = 0; i < negative.size(); i++) {
-            int mag = negative.get(i) + carry;
+        for (byte mag : negative) {
+            mag += (byte) carry;
             if (mag >= base) {
                 mag -= base;
                 carry = 1;
-            } else {
+            }
+            else {
                 carry = 0;
             }
-            negative.set(i, (byte) mag);
         }
 
         shrinkLength(negative, base);
@@ -252,7 +311,8 @@ public class NthBaseNumber {
             rhs.add(NthBaseNumber.getSignBit(rhs.get(rhs.size() - 1), base));
         } else {
             for (int i = 0; i < lenDiff; i++) {
-                rhs.add(NthBaseNumber.getSignBit(rhs.get(rhs.size() - 1), base));
+                if (!rhs.isEmpty())
+                    rhs.add(NthBaseNumber.getSignBit(rhs.get(rhs.size() - 1), base));
             }
             lhs.add(NthBaseNumber.getSignBit(lhs.get(lhs.size() - 1), base));
         }
@@ -261,18 +321,17 @@ public class NthBaseNumber {
     public static void shrinkLength(List<Byte> rhs, byte base) {
         int what = base / 2;
 
-        java.util.function.Predicate<Integer> biggerEqual = i -> i >= what;
-        java.util.function.Predicate<Integer> smaller = i -> !biggerEqual.test(i);
+        java.util.function.Predicate<Byte> biggerEqual = i -> i >= what;
 
         java.util.function.Consumer<List<Byte>> shrink = vec -> {
             int posToDel = 1;
 
-            if (biggerEqual.test(Integer.valueOf(vec.get(vec.size() - 1)))) {
-                while (vec.get(vec.size() - posToDel) == base - 1) {
+            if (biggerEqual.test(vec.getLast())) {
+                while (vec.get(vec.size() - posToDel) >= base / 2) {
                     posToDel++;
                 }
             } else {
-                while (vec.get(vec.size() - posToDel) == 0) {
+                while (vec.get(vec.size() - posToDel) == 0 && vec.size() - posToDel > 0) {
                     posToDel++;
                 }
             }
