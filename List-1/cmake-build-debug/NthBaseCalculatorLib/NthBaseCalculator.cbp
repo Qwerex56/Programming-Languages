@@ -62,6 +62,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseManip.cpp">
+			<Option target="NthBaseCalculatorLib"/>
+		</Unit>
+		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseMath.cpp">
+			<Option target="NthBaseCalculatorLib"/>
+		</Unit>
 		<Unit filename="/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseNumber.cpp">
 			<Option target="NthBaseCalculatorLib"/>
 		</Unit>

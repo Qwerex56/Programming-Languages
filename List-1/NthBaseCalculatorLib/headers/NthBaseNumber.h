@@ -15,100 +15,86 @@
 #include <algorithm>
 #include <numeric>
 
-/// Creates a number in given `u'x` base
-class NthBaseNumber {
-public:
-    explicit NthBaseNumber(int64_t init = 0, const std::shared_ptr<NumberCoder> &nc = nullptr);
+namespace nthBase {
+    class NthBaseNumber {
+    public:
+        explicit NthBaseNumber(int64_t init = 0, const std::shared_ptr<NumberCoder> &nc = nullptr);
 
-    [[maybe_unused]] explicit NthBaseNumber(CodedNumber &init, bool isReversed = false, const std::shared_ptr<NumberCoder> &nc = nullptr);
-    explicit NthBaseNumber(CodedNumber &&init, bool isReversed = false, const std::shared_ptr<NumberCoder> &nc = nullptr);
+        [[maybe_unused]]
+        explicit NthBaseNumber(CodedNumber &init, bool isReversed = false, const std::shared_ptr<NumberCoder> &nc = nullptr);
 
-    [[maybe_unused]] NthBaseNumber(const NthBaseNumber &other);
+        explicit NthBaseNumber(CodedNumber &&init, bool isReversed = false, const std::shared_ptr<NumberCoder> &nc = nullptr);
 
-    [[maybe_unused]] NthBaseNumber(const NthBaseNumber &&other) noexcept;
-    NthBaseNumber& operator =(const NthBaseNumber &other);
+        [[maybe_unused]]
+        NthBaseNumber(const NthBaseNumber &other);
 
-    [[maybe_unused]]
-    void ChangeBase(const std::shared_ptr<NumberCoder> &newNc);
+        [[maybe_unused]]
+        NthBaseNumber(const NthBaseNumber &&other) noexcept;
 
-    [[nodiscard]]
-    inline int getBase() const noexcept {
-        return this->_numberCoder->getBase();
-    }
+        NthBaseNumber& operator =(const NthBaseNumber &other);
 
-    [[maybe_unused]]
-    [[nodiscard]]
-    inline bool isNegative() const {
-        return isNegative(*this);
-    }
+        [[maybe_unused]]
+        void ChangeBase(const std::shared_ptr<NumberCoder> &newNc);
 
-    [[maybe_unused]]
-    [[nodiscard]]
-    inline bool isPositive() const {
-        return *this >= NthBaseNumber(0, this->_numberCoder);
-    }
+        [[nodiscard]]
+        inline int getBase() const noexcept {
+            return this->_numberCoder->getBase();
+        }
 
-    [[maybe_unused]]
-    inline NthBaseNumber& negate() noexcept {
-        this->_number = negate(this->_number, this->getBase());
-        return *this;
-    }
+        [[nodiscard]]
+        [[maybe_unused]]
+        inline size_t getSize() const noexcept {
+            return std::size(this->_number);
+        }
 
-    [[maybe_unused]]
-    [[nodiscard]]
-    inline NthBaseNumber getNegate() const noexcept {
-        auto negative = NthBaseNumber(negate(this->_number, this->getBase()), true, this->_numberCoder);
-        return negative;
-    }
+        [[nodiscard]]
+        [[maybe_unused]]
+        inline CodedNumber& getNumber() noexcept {
+            return this->_number;
+        }
 
-    [[maybe_unused]]
-    [[nodiscard]]
-    inline NthBaseNumber getPositive() const noexcept {
-        return isPositive()? *this : this->getNegate();
-    }
+        [[nodiscard]]
+        [[maybe_unused]]
+        inline CodedNumber getNumberConst() const {
+            return this->_number;
+        }
 
-    NthBaseNumber& operator +=(NthBaseNumber &other);
-    NthBaseNumber& operator -=(NthBaseNumber &other);
-    NthBaseNumber& operator *=(NthBaseNumber &other);
+        NthBaseNumber& operator +=(const NthBaseNumber &rhs);
+        NthBaseNumber& operator -=(const NthBaseNumber &rhs);
+        NthBaseNumber& operator *=(const NthBaseNumber &rhs);
+        NthBaseNumber& operator /=(const NthBaseNumber &rhs);
+        NthBaseNumber& operator %=(const NthBaseNumber &rhs);
 
-    NthBaseNumber& operator ++();
-    const NthBaseNumber operator ++(int);
+        NthBaseNumber& operator ++();
+        const NthBaseNumber operator ++(int);
 
-    bool operator ==(const NthBaseNumber &other) const;
-    bool operator !=(const NthBaseNumber &other) const;
-    bool operator <(const NthBaseNumber &other) const;
-    bool operator >(const NthBaseNumber &other) const;
-    bool operator <=(const NthBaseNumber &other) const;
-    bool operator >=(const NthBaseNumber &other) const;
+        NthBaseNumber& operator --();
+        const NthBaseNumber operator --(int);
 
-    friend std::ostream& operator <<(std::ostream &os, NthBaseNumber &number);
-    friend NthBaseNumber operator +(NthBaseNumber lhs, NthBaseNumber &rhs);
-    friend NthBaseNumber operator -(NthBaseNumber lhs, NthBaseNumber &rhs);
-    friend NthBaseNumber operator *(NthBaseNumber lhs, NthBaseNumber &rhs);
+        bool operator ==(const NthBaseNumber &rhs) const;
+        bool operator !=(const NthBaseNumber &rhs) const;
+        bool operator <(const NthBaseNumber &rhs) const;
+        bool operator >(const NthBaseNumber &rhs) const;
+        bool operator <=(const NthBaseNumber &rhs) const;
+        bool operator >=(const NthBaseNumber &rhs) const;
 
-    [[maybe_unused]]
-    static inline CodedNumber getNegate(NthBaseNumber &what) {
-        return negate(what._number, what.getBase());
-    }
+        friend std::ostream& operator <<(std::ostream &os, NthBaseNumber &number);
 
-    [[maybe_unused]]
-    static inline bool isNegative(const NthBaseNumber &what) noexcept;
+        friend NthBaseNumber operator +(NthBaseNumber lhs, const NthBaseNumber &rhs);
+        friend NthBaseNumber operator -(NthBaseNumber lhs, const NthBaseNumber &rhs);
+        friend NthBaseNumber operator *(NthBaseNumber lhs, const NthBaseNumber &rhs);
+        friend NthBaseNumber operator /(NthBaseNumber lhs, const NthBaseNumber &rhs);
+        friend NthBaseNumber operator %(NthBaseNumber lhs, const NthBaseNumber &rhs);
 
-    static std::tuple<NthBaseNumber, NthBaseNumber> slowDivision(NthBaseNumber &lhs, NthBaseNumber &rhs);
-private:
-    std::shared_ptr<NumberCoder> _numberCoder;
-    CodedNumber _number;
+        [[maybe_unused]] [[maybe_unused]]
+        static std::tuple<NthBaseNumber, NthBaseNumber> slowDivision(NthBaseNumber &lhs, NthBaseNumber &rhs);
+    private:
+        std::shared_ptr<NumberCoder> _numberCoder;
+        CodedNumber _number;
 
-    static void equalizeLength(CodedNumber &lhs, CodedNumber &rhs, int base);
-
-    static void shrinkLength(CodedNumber &toShrink, int base);
-
-    [[maybe_unused]]
-    static void pushCarryOver(NthBaseNumber &where, int carry = 0);
-
-    static uint8_t getSignBit(const uint8_t &sign, int base);
-
-    static CodedNumber negate(CodedNumber numToNegate, int base);
-};
+        [[maybe_unused]]
+        static void pushCarryOver(NthBaseNumber &where, int carry = 0);
+    };
+}
 
 #endif //LIST_1_NTHBASENUMBER_H

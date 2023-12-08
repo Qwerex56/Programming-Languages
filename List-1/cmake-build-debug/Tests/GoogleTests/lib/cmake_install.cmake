@@ -1,4 +1,4 @@
-# Install script for directory: /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests/lib
+# Install script for directory: /home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googlemock/cmake_install.cmake")
+  include("/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googlemock/cmake_install.cmake")
 
 endif()
 

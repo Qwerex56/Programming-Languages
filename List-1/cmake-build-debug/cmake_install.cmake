@@ -1,4 +1,4 @@
-# Install script for directory: /home/adrianczubaty/Dokumenty/Programming-Languages/List-1
+# Install script for directory: /home/adrianczubaty/Documents/Programming-Languages/List-1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,12 +44,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib/cmake_install.cmake")
+  include("/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/cmake_install.cmake")
+  include("/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -60,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

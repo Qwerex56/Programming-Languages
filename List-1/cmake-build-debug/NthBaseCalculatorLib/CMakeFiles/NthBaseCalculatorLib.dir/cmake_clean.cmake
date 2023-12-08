@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o"
+  "CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o.d"
+  "CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o"
+  "CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o.d"
   "CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o"
   "CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o.d"
   "CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o"

@@ -1,4 +1,4 @@
-# Install script for directory: /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/NthBaseCalculatorLib
+# Install script for directory: /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

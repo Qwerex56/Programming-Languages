@@ -72,17 +72,17 @@
 			[
 				{
 					"backtrace" : 5,
-					"path" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/NthBaseCalculatorLib/headers"
+					"path" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"
 				},
 				{
 					"backtrace" : 6,
 					"isSystem" : true,
-					"path" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"
+					"path" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"
 				},
 				{
 					"backtrace" : 6,
 					"isSystem" : true,
-					"path" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest"
+					"path" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest"
 				}
 			],
 			"language" : "CXX",
@@ -131,22 +131,22 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "NthBaseCalculatorLib/libNthBaseCalculatorLib.a",
+				"fragment" : "../../NthBaseCalculatorLib/libNthBaseCalculatorLib.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "lib/libgtest.a",
+				"fragment" : "../../lib/libgtest.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "lib/libgtest_main.a",
+				"fragment" : "../../lib/libgtest_main.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "lib/libgtest.a",
+				"fragment" : "../../lib/libgtest.a",
 				"role" : "libraries"
 			}
 		],

@@ -3,6 +3,10 @@
 //
 
 #include "../headers/NthBaseNumber.h"
+#include "../headers/NthBaseMath.h"
+#include "../headers/NthBaseManip.h"
+
+using namespace nthBase;
 
 NthBaseNumber::NthBaseNumber(int64_t init, const std::shared_ptr<NumberCoder> &nc) {
     _numberCoder = nc ? nc : std::make_shared<UBaseCoder>(NATURAL_SYSTEM);
@@ -66,14 +70,9 @@ void NthBaseNumber::ChangeBase(const std::shared_ptr<NumberCoder> &newNc) {
     _number = (*_numberCoder)(numberCache);
 }
 
-bool NthBaseNumber::isNegative(const NthBaseNumber &what) noexcept {
-    auto signBit = *(--what._number.end());
-    auto base = what.getBase();
-    return getSignBit(signBit, base);
-}
-
 /// Works very slowly,
 /// Limited to positive integers
+[[maybe_unused]]
 std::tuple<NthBaseNumber, NthBaseNumber> NthBaseNumber::slowDivision(NthBaseNumber &lhs,
                                                                      NthBaseNumber &rhs) {
     auto mem = NthBaseNumber(0, lhs._numberCoder); mem._number.clear();
@@ -89,14 +88,14 @@ std::tuple<NthBaseNumber, NthBaseNumber> NthBaseNumber::slowDivision(NthBaseNumb
             auto factor = NthBaseNumber(i, lhs._numberCoder);
             auto part = rhs * factor;
 
-            shrinkLength(mem._number, mem.getBase());
+            manip::shrinkLength(mem);
             if (mem < part) {
                 partQuot = NthBaseNumber(--i, lhs._numberCoder);
                 break;
             }
         }
 
-        remainder = (rhs * partQuot).getNegate() + mem;
+        remainder = math::negative(rhs * partQuot) + mem;
 
         mem._number.clear(); mem._number.push_back(0);
         mem._number.insert(mem._number.begin(), remainder._number.front());
@@ -113,42 +112,31 @@ std::tuple<NthBaseNumber, NthBaseNumber> NthBaseNumber::slowDivision(NthBaseNumb
     return {result, modulo};
 }
 
-std::ostream &operator <<(std::ostream &os, NthBaseNumber &number) {
-    auto foo = (*number._numberCoder)(number._number);
-    std::cout << foo << ": ";
+std::ostream& operator <<(std::ostream &os, NthBaseNumber &number) {
+    const auto TO_ASCII = 55;
+    auto vec = number.getNumber();
 
-    std::reverse(number._number.begin(), number._number.end());
+    std::for_each(vec.crbegin(), vec.crend(), [&](const auto &item) {
+       if (item > 9) std::cout << static_cast<char>(item + TO_ASCII);
+       else std::cout << static_cast<int>(item);
+    });
 
-    for (auto &frag : number._number) {
-        if (frag > 9) {
-            std::cout << static_cast<char>(frag + 55);
-        }
-        else
-        {
-            std::cout << static_cast<int>(frag);
-        }
-    }
-
-    std::reverse(number._number.begin(), number._number.end());
     return os;
 }
 
-NthBaseNumber& NthBaseNumber::operator +=(NthBaseNumber &other) {
+NthBaseNumber& NthBaseNumber::operator +=(const NthBaseNumber &rhs) {
     const auto thisBase = this->_numberCoder->getBase();
-    const auto otherBase = other._numberCoder->getBase();
+    const auto otherBase = rhs._numberCoder->getBase();
 
     if (thisBase != otherBase) {
-        other.ChangeBase(this->_numberCoder);
+        throw "TODO: add exception for this";
     }
-
-    // Makes sure that both of the vectors are same size
-    equalizeLength(this->_number, other._number, thisBase);
 
     auto carry = uint8_t { 0 };
 
     for (int i = 0; i < this->_number.size(); i++) {
         auto &num1 = this->_number[i];
-        const auto &num2 = other._number[i];
+        const auto &num2 = rhs._number[i];
 
         num1 += num2 + carry;
 
@@ -161,17 +149,16 @@ NthBaseNumber& NthBaseNumber::operator +=(NthBaseNumber &other) {
         }
     }
 
-    shrinkLength(this->_number, thisBase);
-    shrinkLength(other._number, otherBase);
+    manip::shrinkLength(*this);
 
     return *this;
 }
 
-NthBaseNumber& NthBaseNumber::operator -=(NthBaseNumber &other) {
-    return operator+=(other.negate());
+NthBaseNumber& NthBaseNumber::operator -=(const NthBaseNumber &rhs) {
+    return operator+=(math::negative(rhs));
 }
 
-NthBaseNumber& NthBaseNumber::operator *=(NthBaseNumber &other) {
+NthBaseNumber& NthBaseNumber::operator *=(const NthBaseNumber &other) {
     if (other == NthBaseNumber(0, other._numberCoder) || *this == NthBaseNumber(0, other._numberCoder)) {
         *this = NthBaseNumber(0, other._numberCoder);
         return *this;
@@ -183,7 +170,7 @@ NthBaseNumber& NthBaseNumber::operator *=(NthBaseNumber &other) {
     this->_number.insert(this->_number.cend(), 2, this->_number.back());
 
     if (thisBase != otherBase) {
-        other.ChangeBase(this->_numberCoder);
+        throw "TODO: add exception for this";
     }
 
     auto additionalZeros = 0;
@@ -215,8 +202,8 @@ NthBaseNumber& NthBaseNumber::operator *=(NthBaseNumber &other) {
         sum += multiple;
     }
 
-    if (other.isNegative()) {
-        auto addNeg = this->getNegate();
+    if (math::isNegative(other)) {
+        auto addNeg = math::negative(*this);
         addNeg._number.insert(addNeg._number.cbegin(), additionalZeros, 0);
 
         sum += addNeg;
@@ -227,24 +214,42 @@ NthBaseNumber& NthBaseNumber::operator *=(NthBaseNumber &other) {
     return *this;
 }
 
-NthBaseNumber operator +(NthBaseNumber lhs, NthBaseNumber &rhs) {
+NthBaseNumber& NthBaseNumber::operator /=(const NthBaseNumber &rhs) {
+    return *this;
+}
+
+NthBaseNumber& NthBaseNumber::operator %=(const nthBase::NthBaseNumber &rhs) {
+    return *this;
+}
+
+NthBaseNumber operator +(NthBaseNumber lhs, const NthBaseNumber &rhs) {
     lhs += rhs;
     return lhs;
 }
 
-NthBaseNumber operator -(NthBaseNumber lhs, NthBaseNumber &rhs) {
+NthBaseNumber operator -(NthBaseNumber lhs, const NthBaseNumber &rhs) {
     lhs -= rhs;
     return lhs;
 }
 
-NthBaseNumber operator *(NthBaseNumber lhs, NthBaseNumber &rhs) {
+NthBaseNumber operator *(NthBaseNumber lhs, const NthBaseNumber &rhs) {
     lhs *= rhs;
     return lhs;
 }
 
+NthBaseNumber operator /(NthBaseNumber lhs, const NthBaseNumber &rhs) {
+    lhs /= rhs;
+    return lhs;
+}
+
+NthBaseNumber operator %(NthBaseNumber lhs, const NthBaseNumber &rhs) {
+    lhs %= rhs;
+    return lhs;
+}
+
 NthBaseNumber& NthBaseNumber::operator ++() {
-    auto inc = NthBaseNumber(1, std::shared_ptr<NumberCoder>(this->_numberCoder));
-    *this = *this + inc;
+    auto inc = NthBaseNumber(1, this->_numberCoder);
+    *this += inc;
     return *this;
 }
 
@@ -254,13 +259,25 @@ const NthBaseNumber NthBaseNumber::operator ++(int) {
     return old;
 }
 
-bool NthBaseNumber::operator ==(const NthBaseNumber &other) const {
-    if (this->_number.size() != other._number.size()) {
+NthBaseNumber& NthBaseNumber::operator--() {
+    auto decrement = NthBaseNumber(-1, this->_numberCoder);
+    *this += decrement;
+    return *this;
+}
+
+const NthBaseNumber NthBaseNumber::operator--(int) {
+    const auto old = *this;
+    operator--();
+    return old;
+}
+
+bool NthBaseNumber::operator ==(const NthBaseNumber &rhs) const {
+    if (this->getSize() != rhs.getSize()) {
         return false;
     }
 
     for (int i = 0; i < this->_number.size(); i++) {
-        if (other._number[i] != this->_number[i]) {
+        if (rhs._number[i] != this->_number[i]) {
             return false;
         }
     }
@@ -273,42 +290,35 @@ bool NthBaseNumber::operator !=(const NthBaseNumber &other) const {
 }
 
 bool NthBaseNumber::operator <(const NthBaseNumber &other) const {
-    auto thisSign = getSignBit(*this->_number.crbegin(), this->getBase());
-    auto otherSign = getSignBit(*other._number.crbegin(), other.getBase());
-    auto const areBothNegative = this->isNegative() && other.isNegative();
+    auto thisSign = math::getSign(*this);
+    auto otherSign = math::getSign(other);
+    auto const areBothNegative = math::isNegative(*this) && math::isNegative(other);
 
     if (thisSign != otherSign) {
         return thisSign > otherSign;
     }
 
-    if (this->_number.size() < other._number.size()) {
+    if (this->getSize() < other.getSize()) {
         return !areBothNegative;
     }
 
-    if (this->_number.size() > other._number.size()) {
+    if (this->getSize() > other.getSize()) {
         return areBothNegative;
     }
 
     auto it = this->_number.crbegin();
     auto oIt = other._number.crbegin();
 
-    while (it != this->_number.crend()) {
-        if (*it == *oIt) {
-            it++;
-            oIt++;
-            continue;
-        }
+    while (*it == *oIt) {
+        it++;
+        oIt++;
 
-        if (*it < *oIt) {
-            return true;
-        }
-
-        if (*it > *oIt) {
+        if (it == this->_number.crend()) {
             return false;
         }
     }
 
-    return false;
+    return *it < *oIt;
 }
 
 bool NthBaseNumber::operator >(const NthBaseNumber &other) const {
@@ -323,49 +333,6 @@ bool NthBaseNumber::operator >=(const NthBaseNumber &other) const {
     return !(*this < other);
 }
 
-/// Helps to determine if number is negative
-inline void NthBaseNumber::equalizeLength(std::vector<uint8_t> &lhs, std::vector<uint8_t> &rhs, int base) {
-    auto lenDiff = abs(static_cast<int>(lhs.size() - rhs.size())) + 1;
-    auto const once = 1;
-
-    auto pushLength = [&lenDiff, &base](CodedNumber &smaller, CodedNumber &bigger) -> void {
-        smaller.insert(smaller.cend(), lenDiff, NthBaseNumber::getSignBit(*smaller.crbegin(), base));
-        bigger.insert(bigger.cend(), once, NthBaseNumber::getSignBit(*bigger.crbegin(), base));
-    };
-
-    lhs.size() < rhs.size() ?
-    pushLength(lhs, rhs) :
-    pushLength(rhs, lhs);
-}
-
-inline void NthBaseNumber::shrinkLength(std::vector<uint8_t> &toShrink, int base) {
-    auto const what = base / 2;
-    auto const biggerEqual = [&what](int i) {
-        return i >= what;
-    };
-
-    auto const shrink = [&biggerEqual, &base](CodedNumber &vec) {
-        auto posToDel = 1;
-
-        if (biggerEqual(*vec.crbegin())) {
-            while (vec[vec.size() - posToDel] == base - 1) {
-                posToDel++;
-            }
-        }
-        else {
-            while (vec[vec.size() - posToDel] == 0 && vec.size() - posToDel > 0) {
-                posToDel++;
-            }
-        }
-        posToDel -= 2;
-        for (int i = 0; i < posToDel; i++) {
-            vec.pop_back();
-        }
-    };
-
-    shrink(toShrink);
-}
-
 [[maybe_unused]]
 void NthBaseNumber::pushCarryOver(NthBaseNumber &where, int carry) {
     auto &number = where._number;
@@ -375,36 +342,4 @@ void NthBaseNumber::pushCarryOver(NthBaseNumber &where, int carry) {
         codedCarry.erase(codedCarry.cend());
     }
     number.insert(number.cend(), codedCarry.cbegin(), codedCarry.cend());
-}
-
-/// Returns base - 1 if number is negative, 0 otherwise
-uint8_t NthBaseNumber::getSignBit(const uint8_t &sign, const int base) {
-    auto result = sign >= (base / 2) ?
-                  sign :
-                  0;
-    return result;
-}
-
-CodedNumber NthBaseNumber::negate(std::vector<uint8_t> numToNegate, const int base) {
-    auto negative = CodedNumber(numToNegate.size(), base - 1);
-    auto carry = 1;
-    equalizeLength(numToNegate, negative, base);
-
-    for (auto i = 0; i < negative.size(); i++) {
-        negative[i] -= numToNegate[i];
-    }
-
-    for (auto &mag : negative) {
-        mag += carry;
-        if (mag >= base) {
-            mag -= base;
-            carry = 1;
-        }
-        else {
-            carry = 0;
-        }
-    }
-
-    shrinkLength(negative, base);
-    return negative;
 }
