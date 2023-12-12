@@ -8,12 +8,15 @@
 #include <iostream>
 #include <vector>
 #include <cstdint>
+#include "./NthBaseExceptions.h"
 
 #define CodedNumber std::vector<uint8_t>
 
 class NumberCoder {
 public:
-    explicit NumberCoder(int base = 10) : _base(base) {} ;
+    explicit NumberCoder(int base = 10) : _base(base) {
+        if (base < 2) throw nthBase::bad_base_error();
+    }
     virtual ~NumberCoder() = default;
 
     virtual CodedNumber operator ()(int64_t numberToCode) = 0;
@@ -22,7 +25,7 @@ public:
     [[nodiscard]] virtual inline constexpr int getBase() const = 0;
 
 protected:
-    int _base = 10;
+    int _base;
 };
 
 #endif //LIST_1_NUMBERCODER_H

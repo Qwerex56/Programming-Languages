@@ -5,16 +5,18 @@
 #include "../headers/NthBaseManip.h"
 #include "../headers/NthBaseMath.h"
 
+#include "../headers/NthBaseNumber.h"
+
 namespace manip = nthBase::manip;
 
 using namespace nthBase;
 
-void manip::shrinkLength(NthBaseNumber &toShrink) {
+void nthBase::manip::shrinkLength(NthBaseNumber &toShrink) {
     auto sign = math::getSign(toShrink);
     decltype(auto) vec = toShrink.getNumber();
 
     // remove all sign bits
-    while (vec.back() == sign) {
+    while (vec.back() == sign && !vec.empty()) {
         vec.pop_back();
     }
 

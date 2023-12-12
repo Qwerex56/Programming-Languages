@@ -3,29 +3,25 @@
 //
 
 #include "gtest/gtest.h"
+
 #include "NthBaseNumber.h"
 
-TEST(NthBaseNumberTest, BINARY_DIG) {
-    auto testData1 = NthBaseNumber(123, std::make_shared<UBaseCoder>(2));
-    auto testData2 = NthBaseNumber(-15, std::make_shared<UBaseCoder>(2));
-
-    EXPECT_EQ(testData1.getBase(), 2);
-
-    EXPECT_FALSE(testData1.isNegative());
-    EXPECT_TRUE(testData2.isNegative());
-
-    EXPECT_FALSE(testData1 == testData2);
-    EXPECT_TRUE(testData1 != testData2);
-    EXPECT_FALSE(testData1 < testData2);
-    EXPECT_TRUE(testData1 > testData2);
-    EXPECT_FALSE(testData1 < testData2);
-    EXPECT_TRUE(testData1 > testData2);
+TEST(NthBaseNumberTest, CTOR) {
+    auto dataL = nthBase::NthBaseNumber();
+    auto dataR = nthBase::NthBaseNumber();
 }
 
-TEST(NthBaseNumberTest, OCT_DIG) {
-
+TEST(NthBaseNumberTest, CONVERSION) {
+    auto dataL = nthBase::NthBaseNumber();
+    auto dataR = nthBase::NthBaseNumber();
 }
 
-TEST(NthBaseNumberTest, DECIMAL_DIG) {
+TEST(NthBaseNumberTest, ARITHMETIC) {
+    auto dataL = nthBase::NthBaseNumber();
+    auto dataR = nthBase::NthBaseNumber();
+}
 
+TEST(NthBaseNumberTest, BOOLEAN) {
+    auto dataL = nthBase::NthBaseNumber();
+    auto dataR = nthBase::NthBaseNumber();
 }

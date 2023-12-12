@@ -3,6 +3,7 @@
 //
 
 #include "../headers/NthBaseMath.h"
+#include "../headers/NthBaseNumber.h"
 
 namespace math = nthBase::math;
 using namespace nthBase;
@@ -33,5 +34,5 @@ bool math::isPositive(const nthBase::NthBaseNumber &number) {
 }
 
 uint8_t math::getSign(const nthBase::NthBaseNumber &number) {
-    return number.getNumberConst().front();
+    return number.getNumberConst().back();
 }

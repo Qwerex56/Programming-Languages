@@ -21,9 +21,9 @@ namespace nthBase {
         explicit NthBaseNumber(int64_t init = 0, const std::shared_ptr<NumberCoder> &nc = nullptr);
 
         [[maybe_unused]]
-        explicit NthBaseNumber(CodedNumber &init, bool isReversed = false, const std::shared_ptr<NumberCoder> &nc = nullptr);
+        explicit NthBaseNumber(CodedNumber &init, const std::shared_ptr<NumberCoder> &nc = nullptr, bool isReversed = false);
 
-        explicit NthBaseNumber(CodedNumber &&init, bool isReversed = false, const std::shared_ptr<NumberCoder> &nc = nullptr);
+        explicit NthBaseNumber(CodedNumber &&init, const std::shared_ptr<NumberCoder> &nc = nullptr, bool isReversed = false);
 
         [[maybe_unused]]
         NthBaseNumber(const NthBaseNumber &other);
@@ -78,15 +78,45 @@ namespace nthBase {
         bool operator <=(const NthBaseNumber &rhs) const;
         bool operator >=(const NthBaseNumber &rhs) const;
 
-        friend std::ostream& operator <<(std::ostream &os, NthBaseNumber &number);
+        friend std::ostream& operator <<(std::ostream &os, NthBaseNumber &number) {
+            const auto TO_ASCII = 55;
+            auto vec = number.getNumber();
 
-        friend NthBaseNumber operator +(NthBaseNumber lhs, const NthBaseNumber &rhs);
-        friend NthBaseNumber operator -(NthBaseNumber lhs, const NthBaseNumber &rhs);
-        friend NthBaseNumber operator *(NthBaseNumber lhs, const NthBaseNumber &rhs);
-        friend NthBaseNumber operator /(NthBaseNumber lhs, const NthBaseNumber &rhs);
-        friend NthBaseNumber operator %(NthBaseNumber lhs, const NthBaseNumber &rhs);
+            std::for_each(vec.crbegin(), vec.crend(), [&](const auto &item) {
+                if (item > 9) std::cout << static_cast<char>(item + TO_ASCII);
+                else std::cout << static_cast<int>(item);
+            });
 
-        [[maybe_unused]] [[maybe_unused]]
+            return os;
+        }
+
+        friend NthBaseNumber operator +(NthBaseNumber lhs, const NthBaseNumber &rhs) {
+            lhs += rhs;
+            return lhs;
+        }
+
+        friend NthBaseNumber operator -(NthBaseNumber lhs, const NthBaseNumber &rhs) {
+            lhs -= rhs;
+            return lhs;
+        }
+
+        friend NthBaseNumber operator *(NthBaseNumber lhs, const NthBaseNumber &rhs) {
+            lhs *= rhs;
+            return lhs;
+        }
+
+        friend NthBaseNumber operator /(NthBaseNumber lhs, const NthBaseNumber &rhs) {
+            lhs /= rhs;
+            return lhs;
+        }
+
+        friend NthBaseNumber operator %(NthBaseNumber lhs, const NthBaseNumber &rhs) {
+            lhs %= rhs;
+            return lhs;
+        }
+
+        [[maybe_unused]]
+        [[maybe_unused]]
         static std::tuple<NthBaseNumber, NthBaseNumber> slowDivision(NthBaseNumber &lhs, NthBaseNumber &rhs);
     private:
         std::shared_ptr<NumberCoder> _numberCoder;

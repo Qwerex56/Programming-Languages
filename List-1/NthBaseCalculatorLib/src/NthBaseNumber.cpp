@@ -3,8 +3,11 @@
 //
 
 #include "../headers/NthBaseNumber.h"
+
 #include "../headers/NthBaseMath.h"
 #include "../headers/NthBaseManip.h"
+
+#include "../headers/NthBaseExceptions.h"
 
 using namespace nthBase;
 
@@ -14,7 +17,9 @@ NthBaseNumber::NthBaseNumber(int64_t init, const std::shared_ptr<NumberCoder> &n
 }
 
 [[maybe_unused]]
-NthBaseNumber::NthBaseNumber(std::vector<uint8_t> &init, bool isReversed, const std::shared_ptr<NumberCoder> &nc) {
+NthBaseNumber::NthBaseNumber(std::vector<uint8_t> &init,
+                             const std::shared_ptr<NumberCoder> &nc,
+                             bool isReversed) {
     _numberCoder = nc ? nc : std::make_shared<UBaseCoder>(NATURAL_SYSTEM);
     if (!isReversed) {
         std::reverse(init.begin(), init.end());
@@ -22,7 +27,9 @@ NthBaseNumber::NthBaseNumber(std::vector<uint8_t> &init, bool isReversed, const 
     _number = std::move(init);
 }
 
-NthBaseNumber::NthBaseNumber(std::vector<uint8_t> &&init, bool isReversed, const std::shared_ptr<NumberCoder> &nc) {
+NthBaseNumber::NthBaseNumber(std::vector<uint8_t> &&init,
+                             const std::shared_ptr<NumberCoder> &nc,
+                             bool isReversed) {
     _numberCoder = nc ? nc : std::make_shared<UBaseCoder>(NATURAL_SYSTEM);
     if (!isReversed) {
         std::reverse(init.begin(), init.end());
@@ -60,6 +67,7 @@ NthBaseNumber::NthBaseNumber(const NthBaseNumber &&other) noexcept {
     this->_number = CodedNumber(other._number);
 }
 
+/// Limited usage to numbers of size int64
 [[maybe_unused]]
 void NthBaseNumber::ChangeBase(const std::shared_ptr<NumberCoder> &newNc) {
     int64_t numberCache = (*_numberCoder)(_number);
@@ -112,31 +120,36 @@ std::tuple<NthBaseNumber, NthBaseNumber> NthBaseNumber::slowDivision(NthBaseNumb
     return {result, modulo};
 }
 
-std::ostream& operator <<(std::ostream &os, NthBaseNumber &number) {
-    const auto TO_ASCII = 55;
-    auto vec = number.getNumber();
-
-    std::for_each(vec.crbegin(), vec.crend(), [&](const auto &item) {
-       if (item > 9) std::cout << static_cast<char>(item + TO_ASCII);
-       else std::cout << static_cast<int>(item);
-    });
-
-    return os;
-}
-
 NthBaseNumber& NthBaseNumber::operator +=(const NthBaseNumber &rhs) {
     const auto thisBase = this->_numberCoder->getBase();
     const auto otherBase = rhs._numberCoder->getBase();
 
     if (thisBase != otherBase) {
-        throw "TODO: add exception for this";
+        throw different_base_error();
     }
 
+    auto result = NthBaseNumber(0, this->_numberCoder); result._number.clear();
     auto carry = uint8_t { 0 };
+    
+    auto longer = this->getSize() > rhs.getSize()? 
+            this->getSize() : 
+            rhs.getSize();
+    
+    auto getI = [](size_t position, const NthBaseNumber& num) -> uint8_t {
+        uint8_t number;
 
-    for (int i = 0; i < this->_number.size(); i++) {
-        auto &num1 = this->_number[i];
-        const auto &num2 = rhs._number[i];
+        try {
+            number = num.getNumberConst().at(position);
+        } catch (std::out_of_range &exc) {
+            number = uint8_t  { 0 };
+        }
+
+        return number;
+    };
+
+    for (int i = 0; i < longer; i++) {
+        auto num1 = getI(i, *this);
+        const auto num2 = getI(i, rhs);
 
         num1 += num2 + carry;
 
@@ -147,8 +160,11 @@ NthBaseNumber& NthBaseNumber::operator +=(const NthBaseNumber &rhs) {
         else {
             carry = 0;
         }
+
+        manip::add(result, result.getNumber().cend(), num1);
     }
 
+    *this = result;
     manip::shrinkLength(*this);
 
     return *this;
@@ -164,26 +180,24 @@ NthBaseNumber& NthBaseNumber::operator *=(const NthBaseNumber &other) {
         return *this;
     }
 
-    const auto thisBase = this->_numberCoder->getBase();
-    const auto otherBase = other._numberCoder->getBase();
+    const auto thisBase = this->getBase();
+    const auto otherBase = other.getBase();
 
     this->_number.insert(this->_number.cend(), 2, this->_number.back());
 
     if (thisBase != otherBase) {
-        throw "TODO: add exception for this";
+        throw different_base_error();
     }
 
     auto additionalZeros = 0;
 
     auto sum = NthBaseNumber(0, this->_numberCoder);
 
-    for (const auto &factorNum2 : other._number) {
+    for (const auto &factorNum2 : other.getNumberConst()) {
         auto carry = 0;
         auto multiple = NthBaseNumber(0, this->_numberCoder);
 
-        multiple = NthBaseNumber(0, this->_numberCoder);
         multiple._number.clear();
-
         multiple._number.insert(multiple._number.cbegin(), additionalZeros++, 0);
 
         for (const auto &factorNum1 : this->_number) {
@@ -215,36 +229,13 @@ NthBaseNumber& NthBaseNumber::operator *=(const NthBaseNumber &other) {
 }
 
 NthBaseNumber& NthBaseNumber::operator /=(const NthBaseNumber &rhs) {
+    if (rhs == NthBaseNumber(0, rhs._numberCoder)) throw divide_by_zero();
     return *this;
 }
 
 NthBaseNumber& NthBaseNumber::operator %=(const nthBase::NthBaseNumber &rhs) {
+    if (rhs == NthBaseNumber(0, rhs._numberCoder)) throw divide_by_zero();
     return *this;
-}
-
-NthBaseNumber operator +(NthBaseNumber lhs, const NthBaseNumber &rhs) {
-    lhs += rhs;
-    return lhs;
-}
-
-NthBaseNumber operator -(NthBaseNumber lhs, const NthBaseNumber &rhs) {
-    lhs -= rhs;
-    return lhs;
-}
-
-NthBaseNumber operator *(NthBaseNumber lhs, const NthBaseNumber &rhs) {
-    lhs *= rhs;
-    return lhs;
-}
-
-NthBaseNumber operator /(NthBaseNumber lhs, const NthBaseNumber &rhs) {
-    lhs /= rhs;
-    return lhs;
-}
-
-NthBaseNumber operator %(NthBaseNumber lhs, const NthBaseNumber &rhs) {
-    lhs %= rhs;
-    return lhs;
 }
 
 NthBaseNumber& NthBaseNumber::operator ++() {

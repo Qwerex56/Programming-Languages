@@ -69,10 +69,38 @@ include NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/progress.make
 # Include the compile flags for this target's objects.
 include NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/flags.make
 
+NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/flags.make
+NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o: /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseManip.cpp
+NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o"
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o -MF CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o.d -o CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o -c /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseManip.cpp
+
+NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.i"
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseManip.cpp > CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.i
+
+NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.s"
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseManip.cpp -o CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.s
+
+NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/flags.make
+NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o: /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseMath.cpp
+NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o"
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o -MF CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o.d -o CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o -c /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseMath.cpp
+
+NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.i"
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseMath.cpp > CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.i
+
+NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.s"
+	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseMath.cpp -o CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.s
+
 NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/flags.make
 NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o: /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseNumber.cpp
 NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o"
 	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o -MF CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o.d -o CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o -c /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseNumber.cpp
 
 NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.i: cmake_force
@@ -86,7 +114,7 @@ NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.s
 NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/flags.make
 NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o: /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/UBaseCoder.cpp
 NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o"
 	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o -MF CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o.d -o CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o -c /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/UBaseCoder.cpp
 
 NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.i: cmake_force
@@ -97,48 +125,20 @@ NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.s: c
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.s"
 	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/UBaseCoder.cpp -o CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.s
 
-NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/flags.make
-NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o: /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseMath.cpp
-NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o"
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o -MF CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o.d -o CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o -c /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseMath.cpp
-
-NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.i"
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseMath.cpp > CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.i
-
-NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.s"
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseMath.cpp -o CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.s
-
-NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/flags.make
-NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o: /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseManip.cpp
-NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o"
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o -MF CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o.d -o CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o -c /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseManip.cpp
-
-NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.i"
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseManip.cpp > CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.i
-
-NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.s"
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseManip.cpp -o CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.s
-
 # Object files for target NthBaseCalculatorLib
 NthBaseCalculatorLib_OBJECTS = \
-"CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o" \
-"CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o" \
+"CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o" \
 "CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o" \
-"CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o"
+"CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o" \
+"CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o"
 
 # External object files for target NthBaseCalculatorLib
 NthBaseCalculatorLib_EXTERNAL_OBJECTS =
 
+NthBaseCalculatorLib/libNthBaseCalculatorLib.a: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o
+NthBaseCalculatorLib/libNthBaseCalculatorLib.a: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o
 NthBaseCalculatorLib/libNthBaseCalculatorLib.a: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o
 NthBaseCalculatorLib/libNthBaseCalculatorLib.a: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o
-NthBaseCalculatorLib/libNthBaseCalculatorLib.a: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o
-NthBaseCalculatorLib/libNthBaseCalculatorLib.a: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o
 NthBaseCalculatorLib/libNthBaseCalculatorLib.a: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make
 NthBaseCalculatorLib/libNthBaseCalculatorLib.a: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libNthBaseCalculatorLib.a"

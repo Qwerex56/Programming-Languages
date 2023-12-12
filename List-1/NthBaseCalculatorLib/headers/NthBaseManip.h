@@ -2,10 +2,13 @@
 // Created by adrianczubaty on 08/12/23.
 //
 
-#include "./NthBaseNumber.h"
-
 #ifndef LIST_1_NTHBASEMANIP_H
 #define LIST_1_NTHBASEMANIP_H
+
+#include <vector>
+#include <cstdint>
+
+#include "./NthBaseNumber.h"
 
 namespace nthBase::manip {
     [[maybe_unused]]

@@ -9,5 +9,6 @@ add_executable(
         UBaseCoderTest.cpp
         NthBaseNumberTest.cpp
 )
+
 target_link_libraries(Google_Tests_run NthBaseCalculatorLib)
 target_link_libraries(Google_Tests_run gtest gtest_main)

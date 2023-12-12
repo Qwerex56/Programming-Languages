@@ -101,13 +101,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "NthBaseCalculatorLib/src/NthBaseNumber.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "NthBaseCalculatorLib/src/UBaseCoder.cpp",
+			"path" : "NthBaseCalculatorLib/src/NthBaseManip.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -119,7 +113,13 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "NthBaseCalculatorLib/src/NthBaseManip.cpp",
+			"path" : "NthBaseCalculatorLib/src/NthBaseNumber.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "NthBaseCalculatorLib/src/UBaseCoder.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
