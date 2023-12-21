@@ -2,12 +2,10 @@
 // Created by adrianczubaty on 09.10.23.
 //
 
+#include "../headers/NthBaseExceptions.h"
 #include "../headers/NthBaseNumber.h"
-
 #include "../headers/NthBaseMath.h"
 #include "../headers/NthBaseManip.h"
-
-#include "../headers/NthBaseExceptions.h"
 
 using namespace nthBase;
 
@@ -117,6 +115,10 @@ std::tuple<NthBaseNumber, NthBaseNumber> NthBaseNumber::slowDivision(NthBaseNumb
     });
 
     auto modulo = mem;
+
+    manip::shrinkLength(result);
+    manip::shrinkLength(modulo);
+
     return {result, modulo};
 }
 
@@ -125,7 +127,7 @@ NthBaseNumber& NthBaseNumber::operator +=(const NthBaseNumber &rhs) {
     const auto otherBase = rhs._numberCoder->getBase();
 
     if (thisBase != otherBase) {
-        throw different_base_error();
+        throw exceptions::different_base_error();
     }
 
     auto result = NthBaseNumber(0, this->_numberCoder); result._number.clear();
@@ -186,7 +188,7 @@ NthBaseNumber& NthBaseNumber::operator *=(const NthBaseNumber &other) {
     this->_number.insert(this->_number.cend(), 2, this->_number.back());
 
     if (thisBase != otherBase) {
-        throw different_base_error();
+        throw exceptions::different_base_error();
     }
 
     auto additionalZeros = 0;
@@ -229,12 +231,12 @@ NthBaseNumber& NthBaseNumber::operator *=(const NthBaseNumber &other) {
 }
 
 NthBaseNumber& NthBaseNumber::operator /=(const NthBaseNumber &rhs) {
-    if (rhs == NthBaseNumber(0, rhs._numberCoder)) throw divide_by_zero();
+    if (rhs == NthBaseNumber(0, rhs._numberCoder)) throw exceptions::divide_by_zero();
     return *this;
 }
 
 NthBaseNumber& NthBaseNumber::operator %=(const nthBase::NthBaseNumber &rhs) {
-    if (rhs == NthBaseNumber(0, rhs._numberCoder)) throw divide_by_zero();
+    if (rhs == NthBaseNumber(0, rhs._numberCoder)) throw exceptions::divide_by_zero();
     return *this;
 }
 

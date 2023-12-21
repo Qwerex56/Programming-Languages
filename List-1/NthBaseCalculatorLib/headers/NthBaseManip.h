@@ -12,18 +12,18 @@
 
 namespace nthBase::manip {
     [[maybe_unused]]
-    void shrinkLength(NthBaseNumber &toShrink);
+    void shrinkLength(NthBaseNumber& toShrink);
 
-    void add(NthBaseNumber &nb,
+    void add(NthBaseNumber& nb,
              std::vector<uint8_t>::const_iterator position,
-             const uint8_t &elem);
+             const uint8_t& elem);
 
-    uint8_t pop(NthBaseNumber &nb,
+    uint8_t pop(NthBaseNumber& nb,
                 std::vector<uint8_t>::const_iterator position);
 
-    uint8_t set(NthBaseNumber &nb,
+    uint8_t set(NthBaseNumber& nb,
                 std::vector<uint8_t>::size_type position,
-                const uint8_t &elem);
+                const uint8_t& elem);
 }
 
 #endif //LIST_1_NTHBASEMANIP_H

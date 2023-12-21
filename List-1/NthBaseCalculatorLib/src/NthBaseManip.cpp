@@ -2,10 +2,9 @@
 // Created by adrianczubaty on 08/12/23.
 //
 
+#include "../headers/NthBaseNumber.h"
 #include "../headers/NthBaseManip.h"
 #include "../headers/NthBaseMath.h"
-
-#include "../headers/NthBaseNumber.h"
 
 namespace manip = nthBase::manip;
 

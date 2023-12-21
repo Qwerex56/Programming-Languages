@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/NthBaseNumberTest.cpp" "Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.o" "gcc" "Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.o.d"
-  "/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/UBaseCoderTest.cpp" "Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.o" "gcc" "Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.o.d"
+  "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests/NthBaseNumberTest.cpp" "Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.o" "gcc" "Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.o.d"
+  "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests/UBaseCoderTest.cpp" "Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.o" "gcc" "Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

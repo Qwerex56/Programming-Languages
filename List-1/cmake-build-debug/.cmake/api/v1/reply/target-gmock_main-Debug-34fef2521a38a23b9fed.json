@@ -106,27 +106,27 @@
 			[
 				{
 					"backtrace" : 8,
-					"path" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"
+					"path" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/NthBaseCalculatorLib/headers"
 				},
 				{
 					"backtrace" : 9,
 					"isSystem" : true,
-					"path" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock/include"
+					"path" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock/include"
 				},
 				{
 					"backtrace" : 9,
 					"isSystem" : true,
-					"path" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock"
+					"path" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock"
 				},
 				{
 					"backtrace" : 9,
 					"isSystem" : true,
-					"path" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"
+					"path" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"
 				},
 				{
 					"backtrace" : 9,
 					"isSystem" : true,
-					"path" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest"
+					"path" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest"
 				}
 			],
 			"language" : "CXX",

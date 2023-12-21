@@ -53,10 +53,10 @@ RM = /home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/lin
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adrianczubaty/Documents/Programming-Languages/List-1
+CMAKE_SOURCE_DIR = /home/adrianczubaty/Dokumenty/Programming-Languages/List-1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/depend.make
@@ -70,18 +70,18 @@ include Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/progress.make
 include Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/flags.make
 
 Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/flags.make
-Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: /home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/src/gtest_main.cc
+Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/src/gtest_main.cc
 Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -MF CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/src/gtest_main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -MF CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/src/gtest_main.cc
 
 Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gtest_main.dir/src/gtest_main.cc.i"
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/src/gtest_main.cc > CMakeFiles/gtest_main.dir/src/gtest_main.cc.i
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/src/gtest_main.cc > CMakeFiles/gtest_main.dir/src/gtest_main.cc.i
 
 Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gtest_main.dir/src/gtest_main.cc.s"
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/src/gtest_main.cc -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.s
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/src/gtest_main.cc -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.s
 
 # Object files for target gtest_main
 gtest_main_OBJECTS = \
@@ -93,19 +93,19 @@ gtest_main_EXTERNAL_OBJECTS =
 lib/libgtest_main.a: Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
 lib/libgtest_main.a: Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/build.make
 lib/libgtest_main.a: Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../../lib/libgtest_main.a"
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest && $(CMAKE_COMMAND) -P CMakeFiles/gtest_main.dir/cmake_clean_target.cmake
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gtest_main.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../../lib/libgtest_main.a"
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest && $(CMAKE_COMMAND) -P CMakeFiles/gtest_main.dir/cmake_clean_target.cmake
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gtest_main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/build: lib/libgtest_main.a
 .PHONY : Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/build
 
 Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/clean:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest && $(CMAKE_COMMAND) -P CMakeFiles/gtest_main.dir/cmake_clean.cmake
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest && $(CMAKE_COMMAND) -P CMakeFiles/gtest_main.dir/cmake_clean.cmake
 .PHONY : Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/clean
 
 Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/depend:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adrianczubaty/Documents/Programming-Languages/List-1 /home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adrianczubaty/Dokumenty/Programming-Languages/List-1 /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : Tests/GoogleTests/lib/googletest/CMakeFiles/gtest_main.dir/depend
 

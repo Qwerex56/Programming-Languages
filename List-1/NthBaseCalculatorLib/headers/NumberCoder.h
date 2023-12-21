@@ -8,6 +8,7 @@
 #include <iostream>
 #include <vector>
 #include <cstdint>
+
 #include "./NthBaseExceptions.h"
 
 #define CodedNumber std::vector<uint8_t>
@@ -20,7 +21,7 @@ public:
     virtual ~NumberCoder() = default;
 
     virtual CodedNumber operator ()(int64_t numberToCode) = 0;
-    virtual int64_t operator ()(const CodedNumber &numberToDecode) = 0;
+    virtual int64_t operator ()(const CodedNumber& numberToDecode) = 0;
 
     [[nodiscard]] virtual inline constexpr int getBase() const = 0;
 

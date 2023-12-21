@@ -7,6 +7,7 @@ set(SOURCE_FILES
         src/NthBaseMath.cpp
         src/NthBaseNumber.cpp
         src/UBaseCoder.cpp
+        src/NthRational.cpp
 )
 
 add_library(NthBaseCalculatorLib STATIC ${SOURCE_FILES})

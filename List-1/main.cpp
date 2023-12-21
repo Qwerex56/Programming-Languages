@@ -1,6 +1,5 @@
 #include <iostream>
 #include <memory>
-#include <cmath>
 
 #include "NthBase.h"
 
@@ -10,7 +9,14 @@ int main() {
     auto item2 = nthBase::NthBaseNumber(1, coder);
     auto item3 = item1 / item2;
 
-    std::cout << item3;
+    std::cout << item3 << std::endl;
 
-    sin(4);
+    auto rat1 = nthBase::rational::NthRational(2, 2, 10);
+    auto rat2 = nthBase::rational::NthRational(2, 2, 10);
+
+    auto rat3 = rat1 + rat2;
+
+    std::cout << rat3 << std::endl;
+
+    return 0;
 }

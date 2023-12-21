@@ -7,7 +7,7 @@
 
 #include <stdexcept>
 
-namespace nthBase {
+namespace nthBase::exceptions {
     class bad_base_error : public std::exception {
     public:
         explicit bad_base_error() _GLIBCXX_TXN_SAFE { }

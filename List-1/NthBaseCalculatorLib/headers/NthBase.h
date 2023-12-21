@@ -11,17 +11,18 @@
 #include "./NthBaseMath.h"
 #include "./NthBaseManip.h"
 #include "./NthBaseNumber.h"
+#include "./NthRational.h"
 
 namespace nthBase {
     [[maybe_unused]]
     inline std::shared_ptr<UBaseCoder> makeSharedCoder(const uint8_t base) {
-        if (base < 2) throw bad_base_error();
+        if (base < 2) throw exceptions::bad_base_error();
         return std::make_shared<UBaseCoder>(base);
     }
 
     [[maybe_unused]]
     inline NthBaseNumber createNumberInBase(const int64_t number, const uint8_t base) {
-        if (base < 2) throw bad_base_error();
+        if (base < 2) throw exceptions::bad_base_error();
         auto sharedCoder = makeSharedCoder(base);
         return NthBaseNumber(number, sharedCoder);
     }

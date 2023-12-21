@@ -67,7 +67,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug"
+			"value" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -139,7 +139,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-j8"
+			"value" : "-j12"
 		},
 		{
 			"name" : "CMAKE_COLOR_DIAGNOSTICS",
@@ -202,7 +202,7 @@
 					"value" : "CXX compiler"
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "/usr/bin/c++"
 		},
 		{
@@ -330,7 +330,7 @@
 					"value" : "C compiler"
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "/usr/bin/cc"
 		},
 		{
@@ -639,7 +639,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -711,7 +711,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/adrianczubaty/Documents/Programming-Languages/List-1"
+			"value" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -1615,7 +1615,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests"
+			"value" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests"
 		},
 		{
 			"name" : "GoogleTests_IS_TOP_LEVEL",
@@ -1639,7 +1639,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests"
+			"value" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests"
 		},
 		{
 			"name" : "INSTALL_GTEST",
@@ -1663,7 +1663,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug"
+			"value" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug"
 		},
 		{
 			"name" : "List_1_IS_TOP_LEVEL",
@@ -1687,7 +1687,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/adrianczubaty/Documents/Programming-Languages/List-1"
+			"value" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1"
 		},
 		{
 			"name" : "NthBaseCalculator_BINARY_DIR",
@@ -1699,7 +1699,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib"
+			"value" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib"
 		},
 		{
 			"name" : "NthBaseCalculator_IS_TOP_LEVEL",
@@ -1723,7 +1723,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib"
+			"value" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/NthBaseCalculatorLib"
 		},
 		{
 			"name" : "ProcessorCount_cmd_nproc",
@@ -1827,7 +1827,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "Python;3;12;0;64;;cpython-312-x86_64-linux-gnu;abi3;/usr/lib64/python3.12;/usr/lib64/python3.12;/usr/lib/python3.12/site-packages;/usr/lib64/python3.12/site-packages"
+			"value" : "Python;3;12;0;64;32;;cpython-312-x86_64-linux-gnu;abi3;/usr/lib64/python3.12;/usr/local/lib64/python3.12;/usr/local/lib/python3.12/site-packages;/usr/local/lib64/python3.12/site-packages"
 		},
 		{
 			"name" : "_Python3_INTERPRETER_SIGNATURE",
@@ -1840,18 +1840,6 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "f811b8a062a8994e96ffe87747bf9bfe"
-		},
-		{
-			"name" : "_Python3_Interpreter_REASON_FAILURE",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Interpreter reason failure"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : ""
 		},
 		{
 			"name" : "_Python3_NumPy_REASON_FAILURE",
@@ -1887,7 +1875,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest/generated"
+			"value" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest/generated"
 		},
 		{
 			"name" : "gmock_BINARY_DIR",
@@ -1899,7 +1887,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googlemock"
+			"value" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googlemock"
 		},
 		{
 			"name" : "gmock_IS_TOP_LEVEL",
@@ -1923,7 +1911,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock"
+			"value" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock"
 		},
 		{
 			"name" : "gmock_build_tests",
@@ -1951,7 +1939,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib"
+			"value" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib"
 		},
 		{
 			"name" : "googletest-distribution_IS_TOP_LEVEL",
@@ -1975,7 +1963,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib"
+			"value" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests/lib"
 		},
 		{
 			"name" : "gtest_BINARY_DIR",
@@ -1987,7 +1975,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest"
+			"value" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests/lib/googletest"
 		},
 		{
 			"name" : "gtest_IS_TOP_LEVEL",
@@ -2011,7 +1999,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest"
+			"value" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest"
 		},
 		{
 			"name" : "gtest_build_samples",

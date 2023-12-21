@@ -2,8 +2,6 @@
 // Created by adrianczubaty on 08/12/23.
 //
 
-//#include "NthBaseNumber.h"
-
 #ifndef LIST_1_NTHBASEMATH_H
 #define LIST_1_NTHBASEMATH_H
 

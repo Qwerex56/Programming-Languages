@@ -57,10 +57,10 @@ RM = /home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/lin
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adrianczubaty/Documents/Programming-Languages/List-1
+CMAKE_SOURCE_DIR = /home/adrianczubaty/Dokumenty/Programming-Languages/List-1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests//CMakeFiles/progress.marks
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/GoogleTests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles 0
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/CMakeFiles /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/Tests/GoogleTests//CMakeFiles/progress.marks
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/GoogleTests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/GoogleTests/clean
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/GoogleTests/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/GoogleTests/preinstall
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/GoogleTests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/GoogleTests/preinstall
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/GoogleTests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/rule:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/rule
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/rule
 .PHONY : Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ Google_Tests_run: Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/rule
 
 # fast build rule for target.
 Google_Tests_run/fast:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build
 .PHONY : Google_Tests_run/fast
 
 NthBaseNumberTest.o: NthBaseNumberTest.cpp.o
@@ -180,7 +180,7 @@ NthBaseNumberTest.o: NthBaseNumberTest.cpp.o
 
 # target to build an object file
 NthBaseNumberTest.cpp.o:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.o
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.o
 .PHONY : NthBaseNumberTest.cpp.o
 
 NthBaseNumberTest.i: NthBaseNumberTest.cpp.i
@@ -188,7 +188,7 @@ NthBaseNumberTest.i: NthBaseNumberTest.cpp.i
 
 # target to preprocess a source file
 NthBaseNumberTest.cpp.i:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.i
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.i
 .PHONY : NthBaseNumberTest.cpp.i
 
 NthBaseNumberTest.s: NthBaseNumberTest.cpp.s
@@ -196,7 +196,7 @@ NthBaseNumberTest.s: NthBaseNumberTest.cpp.s
 
 # target to generate assembly for a file
 NthBaseNumberTest.cpp.s:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.s
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/NthBaseNumberTest.cpp.s
 .PHONY : NthBaseNumberTest.cpp.s
 
 UBaseCoderTest.o: UBaseCoderTest.cpp.o
@@ -204,7 +204,7 @@ UBaseCoderTest.o: UBaseCoderTest.cpp.o
 
 # target to build an object file
 UBaseCoderTest.cpp.o:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.o
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.o
 .PHONY : UBaseCoderTest.cpp.o
 
 UBaseCoderTest.i: UBaseCoderTest.cpp.i
@@ -212,7 +212,7 @@ UBaseCoderTest.i: UBaseCoderTest.cpp.i
 
 # target to preprocess a source file
 UBaseCoderTest.cpp.i:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.i
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.i
 .PHONY : UBaseCoderTest.cpp.i
 
 UBaseCoderTest.s: UBaseCoderTest.cpp.s
@@ -220,7 +220,7 @@ UBaseCoderTest.s: UBaseCoderTest.cpp.s
 
 # target to generate assembly for a file
 UBaseCoderTest.cpp.s:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.s
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/build.make Tests/GoogleTests/CMakeFiles/Google_Tests_run.dir/UBaseCoderTest.cpp.s
 .PHONY : UBaseCoderTest.cpp.s
 
 # Help Target
@@ -253,6 +253,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,4 +1,4 @@
-/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/adrianczubaty/Documents/Programming-Languages/List-1 -B /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug
+/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/adrianczubaty/Dokumenty/Programming-Languages/List-1 -B /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug
 CMake Deprecation Warning:
   Support for "Extra Generators" like
 
@@ -8,6 +8,6 @@ CMake Deprecation Warning:
   use the cmake-file-api(7) to view CMake-generated project build trees.
 
 
--- Configuring done (0.1s)
+-- Configuring done (0.2s)
 -- Generating done (0.0s)
--- Build files have been written to: /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug
+-- Build files have been written to: /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug
