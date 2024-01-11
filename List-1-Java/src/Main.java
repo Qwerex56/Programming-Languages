@@ -1,16 +1,24 @@
 import NumberCoder.NthBaseNumber;
-import NumberCoder.UBaseCoder;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.HashSet;
+import java.util.Objects;
+
 public class Main {
     public static void main(String[] args) {
-        UBaseCoder code = new UBaseCoder(10);
+        HashSet<NthBaseNumber> set = new HashSet<>();
 
-        NthBaseNumber num = new NthBaseNumber(10, code);
-        NthBaseNumber num2 = new NthBaseNumber(9, code);
+        set.add(new NthBaseNumber(1, 10));
+        set.add(new NthBaseNumber(2, 10));
+        set.add(new NthBaseNumber(3, 10));
+        set.add(new NthBaseNumber(3, 10));
 
-        NthBaseNumber num3 = num.negate();
-        System.out.println(num3.toString());
+        System.out.println(set);
+
+        var x = new NthBaseNumber(-9, 10);
+        var y = new NthBaseNumber(-90, 10);
+
+        System.out.println(x);
+        System.out.println(y);
+        System.out.print(x.Multiply(y));
     }
 }

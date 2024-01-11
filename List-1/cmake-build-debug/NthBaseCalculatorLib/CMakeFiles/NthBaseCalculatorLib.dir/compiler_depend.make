@@ -296,10 +296,11 @@ NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o:
 
 NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o: /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseMath.cpp \
   /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers/NthBaseExceptions.h \
-  /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers/NthBaseMath.h \
   /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers/NthBaseNumber.h \
   /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers/NumberCoder.h \
   /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers/UBaseCoder.h \
+  /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers/NthBaseMath.h \
+  /home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers/NthBaseNumber.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
