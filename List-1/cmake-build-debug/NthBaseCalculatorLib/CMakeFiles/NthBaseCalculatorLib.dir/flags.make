@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers
+CXX_INCLUDES = -I/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/NthBaseCalculatorLib/headers
 
 CXX_FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
 

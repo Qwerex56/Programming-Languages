@@ -18,15 +18,15 @@
 			"isDirty" : false,
 			"major" : 3,
 			"minor" : 27,
-			"patch" : 0,
-			"string" : "3.27.0",
+			"patch" : 8,
+			"string" : "3.27.8",
 			"suffix" : ""
 		}
 	},
 	"objects" : 
 	[
 		{
-			"jsonFile" : "codemodel-v2-2f2f0b7f9d9f30a97f96.json",
+			"jsonFile" : "codemodel-v2-597c812a9d6bf5eeb709.json",
 			"kind" : "codemodel",
 			"version" : 
 			{
@@ -35,7 +35,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cache-v2-d6eaec488af9bee5955c.json",
+			"jsonFile" : "cache-v2-1a99bbb2b41221a0cd2e.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -44,7 +44,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cmakeFiles-v1-178e21686dd1ecc2265f.json",
+			"jsonFile" : "cmakeFiles-v1-77af43f38a64fbca6ae3.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{
@@ -66,7 +66,7 @@
 	{
 		"cache-v2" : 
 		{
-			"jsonFile" : "cache-v2-d6eaec488af9bee5955c.json",
+			"jsonFile" : "cache-v2-1a99bbb2b41221a0cd2e.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -76,7 +76,7 @@
 		},
 		"cmakeFiles-v1" : 
 		{
-			"jsonFile" : "cmakeFiles-v1-178e21686dd1ecc2265f.json",
+			"jsonFile" : "cmakeFiles-v1-77af43f38a64fbca6ae3.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{
@@ -86,7 +86,7 @@
 		},
 		"codemodel-v2" : 
 		{
-			"jsonFile" : "codemodel-v2-2f2f0b7f9d9f30a97f96.json",
+			"jsonFile" : "codemodel-v2-597c812a9d6bf5eeb709.json",
 			"kind" : "codemodel",
 			"version" : 
 			{

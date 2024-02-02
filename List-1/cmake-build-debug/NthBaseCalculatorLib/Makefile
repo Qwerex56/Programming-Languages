@@ -57,10 +57,10 @@ RM = /home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/lin
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adrianczubaty/Documents/Programming-Languages/List-1
+CMAKE_SOURCE_DIR = /home/adrianczubaty/Dokumenty/Programming-Languages/List-1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib//CMakeFiles/progress.marks
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NthBaseCalculatorLib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug/CMakeFiles 0
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/CMakeFiles /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/NthBaseCalculatorLib//CMakeFiles/progress.marks
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NthBaseCalculatorLib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NthBaseCalculatorLib/clean
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NthBaseCalculatorLib/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NthBaseCalculatorLib/preinstall
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NthBaseCalculatorLib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NthBaseCalculatorLib/preinstall
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NthBaseCalculatorLib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/rule:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/rule
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/rule
 .PHONY : NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ NthBaseCalculatorLib: NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/r
 
 # fast build rule for target.
 NthBaseCalculatorLib/fast:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build
 .PHONY : NthBaseCalculatorLib/fast
 
 src/NthBaseManip.o: src/NthBaseManip.cpp.o
@@ -180,7 +180,7 @@ src/NthBaseManip.o: src/NthBaseManip.cpp.o
 
 # target to build an object file
 src/NthBaseManip.cpp.o:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o
 .PHONY : src/NthBaseManip.cpp.o
 
 src/NthBaseManip.i: src/NthBaseManip.cpp.i
@@ -188,7 +188,7 @@ src/NthBaseManip.i: src/NthBaseManip.cpp.i
 
 # target to preprocess a source file
 src/NthBaseManip.cpp.i:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.i
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.i
 .PHONY : src/NthBaseManip.cpp.i
 
 src/NthBaseManip.s: src/NthBaseManip.cpp.s
@@ -196,7 +196,7 @@ src/NthBaseManip.s: src/NthBaseManip.cpp.s
 
 # target to generate assembly for a file
 src/NthBaseManip.cpp.s:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.s
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.s
 .PHONY : src/NthBaseManip.cpp.s
 
 src/NthBaseMath.o: src/NthBaseMath.cpp.o
@@ -204,7 +204,7 @@ src/NthBaseMath.o: src/NthBaseMath.cpp.o
 
 # target to build an object file
 src/NthBaseMath.cpp.o:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o
 .PHONY : src/NthBaseMath.cpp.o
 
 src/NthBaseMath.i: src/NthBaseMath.cpp.i
@@ -212,7 +212,7 @@ src/NthBaseMath.i: src/NthBaseMath.cpp.i
 
 # target to preprocess a source file
 src/NthBaseMath.cpp.i:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.i
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.i
 .PHONY : src/NthBaseMath.cpp.i
 
 src/NthBaseMath.s: src/NthBaseMath.cpp.s
@@ -220,7 +220,7 @@ src/NthBaseMath.s: src/NthBaseMath.cpp.s
 
 # target to generate assembly for a file
 src/NthBaseMath.cpp.s:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.s
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.s
 .PHONY : src/NthBaseMath.cpp.s
 
 src/NthBaseNumber.o: src/NthBaseNumber.cpp.o
@@ -228,7 +228,7 @@ src/NthBaseNumber.o: src/NthBaseNumber.cpp.o
 
 # target to build an object file
 src/NthBaseNumber.cpp.o:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o
 .PHONY : src/NthBaseNumber.cpp.o
 
 src/NthBaseNumber.i: src/NthBaseNumber.cpp.i
@@ -236,7 +236,7 @@ src/NthBaseNumber.i: src/NthBaseNumber.cpp.i
 
 # target to preprocess a source file
 src/NthBaseNumber.cpp.i:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.i
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.i
 .PHONY : src/NthBaseNumber.cpp.i
 
 src/NthBaseNumber.s: src/NthBaseNumber.cpp.s
@@ -244,7 +244,7 @@ src/NthBaseNumber.s: src/NthBaseNumber.cpp.s
 
 # target to generate assembly for a file
 src/NthBaseNumber.cpp.s:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.s
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.s
 .PHONY : src/NthBaseNumber.cpp.s
 
 src/UBaseCoder.o: src/UBaseCoder.cpp.o
@@ -252,7 +252,7 @@ src/UBaseCoder.o: src/UBaseCoder.cpp.o
 
 # target to build an object file
 src/UBaseCoder.cpp.o:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o
 .PHONY : src/UBaseCoder.cpp.o
 
 src/UBaseCoder.i: src/UBaseCoder.cpp.i
@@ -260,7 +260,7 @@ src/UBaseCoder.i: src/UBaseCoder.cpp.i
 
 # target to preprocess a source file
 src/UBaseCoder.cpp.i:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.i
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.i
 .PHONY : src/UBaseCoder.cpp.i
 
 src/UBaseCoder.s: src/UBaseCoder.cpp.s
@@ -268,7 +268,7 @@ src/UBaseCoder.s: src/UBaseCoder.cpp.s
 
 # target to generate assembly for a file
 src/UBaseCoder.cpp.s:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.s
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/build.make NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.s
 .PHONY : src/UBaseCoder.cpp.s
 
 # Help Target
@@ -307,6 +307,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

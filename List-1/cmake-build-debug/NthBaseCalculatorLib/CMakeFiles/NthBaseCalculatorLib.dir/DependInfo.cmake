@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseManip.cpp" "NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o" "gcc" "NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o.d"
-  "/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseMath.cpp" "NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o" "gcc" "NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o.d"
-  "/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseNumber.cpp" "NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o" "gcc" "NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o.d"
-  "/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/src/UBaseCoder.cpp" "NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o" "gcc" "NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o.d"
+  "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseManip.cpp" "NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o" "gcc" "NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseManip.cpp.o.d"
+  "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseMath.cpp" "NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o" "gcc" "NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseMath.cpp.o.d"
+  "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/NthBaseCalculatorLib/src/NthBaseNumber.cpp" "NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o" "gcc" "NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/NthBaseNumber.cpp.o.d"
+  "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/NthBaseCalculatorLib/src/UBaseCoder.cpp" "NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o" "gcc" "NthBaseCalculatorLib/CMakeFiles/NthBaseCalculatorLib.dir/src/UBaseCoder.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

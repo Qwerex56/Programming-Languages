@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "lib/libgmock.a"
+			"path" : "lib/libgtest_main.a"
 		}
 	],
 	"backtrace" : 3,
@@ -23,7 +23,7 @@
 		"files" : 
 		[
 			"Tests/GoogleTests/lib/googletest/cmake/internal_utils.cmake",
-			"Tests/GoogleTests/lib/googlemock/CMakeLists.txt",
+			"Tests/GoogleTests/lib/googletest/CMakeLists.txt",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -34,7 +34,7 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 96,
+				"line" : 141,
 				"parent" : 0
 			},
 			{
@@ -52,7 +52,7 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 115,
+				"line" : 158,
 				"parent" : 0
 			},
 			{
@@ -64,7 +64,7 @@
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 97,
+				"line" : 153,
 				"parent" : 0
 			},
 			{
@@ -79,7 +79,7 @@
 			{
 				"command" : 6,
 				"file" : 1,
-				"line" : 74,
+				"line" : 113,
 				"parent" : 0
 			},
 			{
@@ -106,25 +106,17 @@
 			[
 				{
 					"backtrace" : 8,
-					"path" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/NthBaseCalculatorLib/headers"
-				},
-				{
-					"backtrace" : 9,
-					"path" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock/include"
-				},
-				{
-					"backtrace" : 9,
-					"path" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googlemock"
+					"path" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/NthBaseCalculatorLib/headers"
 				},
 				{
 					"backtrace" : 9,
 					"isSystem" : true,
-					"path" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"
+					"path" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest/include"
 				},
 				{
 					"backtrace" : 9,
 					"isSystem" : true,
-					"path" : "/home/adrianczubaty/Documents/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest"
+					"path" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/Tests/GoogleTests/lib/googletest"
 				}
 			],
 			"language" : "CXX",
@@ -149,7 +141,7 @@
 			"id" : "gtest::@0b63f2edadee2f17f53a"
 		}
 	],
-	"id" : "gmock::@2ca8b9bd4baefddb9d96",
+	"id" : "gtest_main::@0b63f2edadee2f17f53a",
 	"install" : 
 	{
 		"destinations" : 
@@ -164,12 +156,12 @@
 			"path" : "/usr/local"
 		}
 	},
-	"name" : "gmock",
-	"nameOnDisk" : "libgmock.a",
+	"name" : "gtest_main",
+	"nameOnDisk" : "libgtest_main.a",
 	"paths" : 
 	{
-		"build" : "Tests/GoogleTests/lib/googlemock",
-		"source" : "Tests/GoogleTests/lib/googlemock"
+		"build" : "Tests/GoogleTests/lib/googletest",
+		"source" : "Tests/GoogleTests/lib/googletest"
 	},
 	"sourceGroups" : 
 	[
@@ -186,7 +178,7 @@
 		{
 			"backtrace" : 3,
 			"compileGroupIndex" : 0,
-			"path" : "Tests/GoogleTests/lib/googlemock/src/gmock-all.cc",
+			"path" : "Tests/GoogleTests/lib/googletest/src/gtest_main.cc",
 			"sourceGroupIndex" : 0
 		}
 	],

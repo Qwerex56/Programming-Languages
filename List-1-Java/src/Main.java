@@ -1,5 +1,7 @@
 import NumberCoder.NthBaseNumber;
+import NumberCoder.NthBaseRational;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Objects;
 
@@ -13,6 +15,15 @@ public class Main {
         set.add(new NthBaseNumber(3, 10));
 
         System.out.println(set);
+
+        ArrayList<NthBaseNumber> foo = new ArrayList<>();
+
+        foo.add(new NthBaseNumber(1, 10));
+        foo.add(new NthBaseNumber(3, 10));
+        foo.add(new NthBaseNumber(2, 10));
+        foo.add(new NthBaseNumber(3, 10));
+
+        System.out.println(foo);
 
         var x = new NthBaseNumber(-9, 10);
         var y = new NthBaseNumber(-90, 10);
