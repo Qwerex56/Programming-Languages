@@ -1,0 +1,1602 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake:204 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Linux - 6.4.14-200.fc38.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      /* If the compiler does not have __has_include, pretend the answer is
+         always no.  */
+      #  define __has_include(x) 0
+      
+      
+      /* Version number components: V=Version, R=Revision, P=Patch
+         Version date components:   YYYY=Year, MM=Month,   DD=Day  */
+      
+      # define COMPILER_ID ""
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";
+      
+      
+      
+      
+      /* Identify known platforms by name.  */
+      # define PLATFORM_ID
+      
+      
+      /* For windows compilers MSVC and Intel we can determine
+         the architecture of the compiler being used.  This is because
+         the compilers do not have flags that can change the architecture,
+         but rather depend on which compiler is being used
+      */
+      #  define ARCHITECTURE_ID
+      
+      /* Convert integer to decimal digit literals.  */
+      
+      /* Convert integer to hex digit literals.  */
+      
+      /* Construct a string literal encoding the version number. */
+      
+      /* Construct a string literal encoding the internal version number. */
+      
+      /* Construct a string literal encoding the version number components. */
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";
+      char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";
+      
+      
+      
+      # if defined(_MSC_VER) || defined(__ibmxl__) || defined(__IBMC__)
+      #  define C_VERSION "90"
+      # else
+      #  define C_VERSION
+      # endif
+      const char* info_language_standard_default =
+        "INFO" ":" "standard_default[" C_VERSION "]";
+      
+      const char* info_language_extensions_default = "INFO" ":" "extensions_default["
+        "OFF"
+      "]";
+      
+      /*--------------------------------------------------------------------------*/
+      
+      # if defined(__CLASSIC_C__)
+      int main(argc, argv) int argc; char *argv[];
+      # else
+      int main(int argc, char* argv[])
+      # endif
+      {
+        int require = 0;
+        require += info_compiler[argc];
+        require += info_platform[argc];
+        require += info_arch[argc];
+        require += info_language_standard_default[argc];
+        require += info_language_extensions_default[argc];
+        (void)argv;
+        return require;
+      }
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-release/CMakeFiles/3.26.4/CompilerIdC".
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      stdin:1: error: character not allowed to start a syntax specifier
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: -Aa 
+      
+      The output was:
+      1
+      Usage : gpp [-{o|O} outfile] [-I/include/path] [-Dname=val ...] [-z] [-x] [-m]
+                  [-n] [-C | -T | -H | -X | -P | -U ... [-M ...]] [+c<n> str1 str2]
+                  [+s<n> str1 str2 c] [long options] [infile]
+      
+            default:    #define x y           macro(arg,...)
+       -C : maximum cpp compatibility (includes -n, +c, +s, ...)
+       -T : TeX-like    \\define{x}{y}         \\macro{arg}{...}
+       -H : HTML-like   <#define x|y>         <#macro arg|...>
+       -X : XHTML-like  <#define x|y/>        <#macro arg|.../>
+       -P : prolog compatible cpp-like mode
+       -U : user-defined syntax (specified in 9 following args; see manual)
+       -M : user-defined syntax for meta-macros (specified in 7 following args)
+      
+       -o : output to outfile
+       -O : output to outfile and stdout
+       -z : line terminator is CR-LF (MS-DOS style)
+       -x : enable #exec built-in macro
+       -m : enable automatic mode switching upon including .h/.c files
+       -n : send LF characters serving as macro terminators to output
+       +c : use next 2 args as comment start and comment end sequences
+       +s : use next 3 args as string start, end and quote character
+      
+       Long options:
+       --include file : process file before infile
+       --nostdinc : don't search standard directories for files to include
+       --nocurinc : don't search the current directory for files to include
+       --curdirinclast : search the current directory last
+       --warninglevel n : set warning level
+       --includemarker formatstring : keep track of #include directives in output
+      
+       --version : display version information and exit
+       -h, --help : display this message and exit
+      
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: -D__CLASSIC_C__ 
+      
+      The output was:
+      0
+      
+      /* cv-qualifiers did not exist in K&R C */
+      # define const
+      # define volatile
+      
+      /* If the compiler does not have __has_include, pretend the answer is
+         always no.  */
+      #  define __has_include(x) 0
+      
+      
+      /* Version number components: V=Version, R=Revision, P=Patch
+         Version date components:   YYYY=Year, MM=Month,   DD=Day  */
+      
+      # define COMPILER_ID ""
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";
+      
+      
+      
+      
+      /* Identify known platforms by name.  */
+      # define PLATFORM_ID
+      
+      
+      /* For windows compilers MSVC and Intel we can determine
+         the architecture of the compiler being used.  This is because
+         the compilers do not have flags that can change the architecture,
+         but rather depend on which compiler is being used
+      */
+      #  define ARCHITECTURE_ID
+      
+      /* Convert integer to decimal digit literals.  */
+      
+      /* Convert integer to hex digit literals.  */
+      
+      /* Construct a string literal encoding the version number. */
+      
+      /* Construct a string literal encoding the internal version number. */
+      
+      /* Construct a string literal encoding the version number components. */
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";
+      char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";
+      
+      
+      
+      # if defined(_MSC_VER) || defined(__ibmxl__) || defined(__IBMC__)
+      #  define C_VERSION "90"
+      # else
+      #  define C_VERSION
+      # endif
+      const char* info_language_standard_default =
+        "INFO" ":" "standard_default[" C_VERSION "]";
+      
+      const char* info_language_extensions_default = "INFO" ":" "extensions_default["
+        "OFF"
+      "]";
+      
+      /*--------------------------------------------------------------------------*/
+      
+      # if defined()
+      int main(argc, argv) int argc; char *argv[];
+      # else
+      int main(int argc, char* argv[])
+      # endif
+      {
+        int require = 0;
+        require += info_compiler[argc];
+        require += info_platform[argc];
+        require += info_arch[argc];
+        require += info_language_standard_default[argc];
+        require += info_language_extensions_default[argc];
+        (void)argv;
+        return require;
+      }
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-release/CMakeFiles/3.26.4/CompilerIdC".
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      Usage : gpp [-{o|O} outfile] [-I/include/path] [-Dname=val ...] [-z] [-x] [-m]
+                  [-n] [-C | -T | -H | -X | -P | -U ... [-M ...]] [+c<n> str1 str2]
+                  [+s<n> str1 str2 c] [long options] [infile]
+      
+            default:    #define x y           macro(arg,...)
+       -C : maximum cpp compatibility (includes -n, +c, +s, ...)
+       -T : TeX-like    \\define{x}{y}         \\macro{arg}{...}
+       -H : HTML-like   <#define x|y>         <#macro arg|...>
+       -X : XHTML-like  <#define x|y/>        <#macro arg|.../>
+       -P : prolog compatible cpp-like mode
+       -U : user-defined syntax (specified in 9 following args; see manual)
+       -M : user-defined syntax for meta-macros (specified in 7 following args)
+      
+       -o : output to outfile
+       -O : output to outfile and stdout
+       -z : line terminator is CR-LF (MS-DOS style)
+       -x : enable #exec built-in macro
+       -m : enable automatic mode switching upon including .h/.c files
+       -n : send LF characters serving as macro terminators to output
+       +c : use next 2 args as comment start and comment end sequences
+       +s : use next 3 args as string start, end and quote character
+      
+       Long options:
+       --include file : process file before infile
+       --nostdinc : don't search standard directories for files to include
+       --nocurinc : don't search the current directory for files to include
+       --curdirinclast : search the current directory last
+       --warninglevel n : set warning level
+       --includemarker formatstring : keep track of #include directives in output
+      
+       --version : display version information and exit
+       -h, --help : display this message and exit
+      
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      0
+      
+      
+      /* If the compiler does not have __has_include, pretend the answer is
+         always no.  */
+      #  define __has_include(x) 0
+      
+      
+      /* Version number components: V=Version, R=Revision, P=Patch
+         Version date components:   YYYY=Year, MM=Month,   DD=Day  */
+      
+      # define COMPILER_ID ""
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";
+      
+      
+      
+      
+      /* Identify known platforms by name.  */
+      # define PLATFORM_ID
+      
+      
+      /* For windows compilers MSVC and Intel we can determine
+         the architecture of the compiler being used.  This is because
+         the compilers do not have flags that can change the architecture,
+         but rather depend on which compiler is being used
+      */
+      #  define ARCHITECTURE_ID
+      
+      /* Convert integer to decimal digit literals.  */
+      
+      /* Convert integer to hex digit literals.  */
+      
+      /* Construct a string literal encoding the version number. */
+      
+      /* Construct a string literal encoding the internal version number. */
+      
+      /* Construct a string literal encoding the version number components. */
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";
+      char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";
+      
+      
+      
+      # if defined(_MSC_VER) || defined(__ibmxl__) || defined(__IBMC__)
+      #  define C_VERSION "90"
+      # else
+      #  define C_VERSION
+      # endif
+      const char* info_language_standard_default =
+        "INFO" ":" "standard_default[" C_VERSION "]";
+      
+      const char* info_language_extensions_default = "INFO" ":" "extensions_default["
+        "OFF"
+      "]";
+      
+      /*--------------------------------------------------------------------------*/
+      
+      # if defined(__CLASSIC_C__)
+      int main(argc, argv) int argc; char *argv[];
+      # else
+      int main(int argc, char* argv[])
+      # endif
+      {
+        int require = 0;
+        require += info_compiler[argc];
+        require += info_platform[argc];
+        require += info_arch[argc];
+        require += info_language_standard_default[argc];
+        require += info_language_extensions_default[argc];
+        (void)argv;
+        return require;
+      }
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-release/CMakeFiles/3.26.4/CompilerIdC".
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      /* If the compiler does not have __has_include, pretend the answer is
+         always no.  */
+      #  define __has_include(x) 0
+      
+      
+      /* Version number components: V=Version, R=Revision, P=Patch
+         Version date components:   YYYY=Year, MM=Month,   DD=Day  */
+      
+      # define COMPILER_ID ""
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";
+      
+      
+      
+      
+      /* Identify known platforms by name.  */
+      # define PLATFORM_ID
+      
+      
+      /* For windows compilers MSVC and Intel we can determine
+         the architecture of the compiler being used.  This is because
+         the compilers do not have flags that can change the architecture,
+         but rather depend on which compiler is being used
+      */
+      #  define ARCHITECTURE_ID
+      
+      /* Convert integer to decimal digit literals.  */
+      
+      /* Convert integer to hex digit literals.  */
+      
+      /* Construct a string literal encoding the version number. */
+      
+      /* Construct a string literal encoding the internal version number. */
+      
+      /* Construct a string literal encoding the version number components. */
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";
+      char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";
+      
+      
+      
+      # if defined(_MSC_VER) || defined(__ibmxl__) || defined(__IBMC__)
+      #  define C_VERSION "90"
+      # else
+      #  define C_VERSION
+      # endif
+      const char* info_language_standard_default =
+        "INFO" ":" "standard_default[" C_VERSION "]";
+      
+      const char* info_language_extensions_default = "INFO" ":" "extensions_default["
+        "OFF"
+      "]";
+      
+      /*--------------------------------------------------------------------------*/
+      
+      # if defined(__CLASSIC_C__)
+      int main(argc, argv) int argc; char *argv[];
+      # else
+      int main(int argc, char* argv[])
+      # endif
+      {
+        int require = 0;
+        require += info_compiler[argc];
+        require += info_platform[argc];
+        require += info_arch[argc];
+        require += info_language_standard_default[argc];
+        require += info_language_extensions_default[argc];
+        (void)argv;
+        return require;
+      }
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-release/CMakeFiles/3.26.4/CompilerIdC".
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      stdin:1: error: character not allowed to start a syntax specifier
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: -Aa 
+      
+      The output was:
+      1
+      Usage : gpp [-{o|O} outfile] [-I/include/path] [-Dname=val ...] [-z] [-x] [-m]
+                  [-n] [-C | -T | -H | -X | -P | -U ... [-M ...]] [+c<n> str1 str2]
+                  [+s<n> str1 str2 c] [long options] [infile]
+      
+            default:    #define x y           macro(arg,...)
+       -C : maximum cpp compatibility (includes -n, +c, +s, ...)
+       -T : TeX-like    \\define{x}{y}         \\macro{arg}{...}
+       -H : HTML-like   <#define x|y>         <#macro arg|...>
+       -X : XHTML-like  <#define x|y/>        <#macro arg|.../>
+       -P : prolog compatible cpp-like mode
+       -U : user-defined syntax (specified in 9 following args; see manual)
+       -M : user-defined syntax for meta-macros (specified in 7 following args)
+      
+       -o : output to outfile
+       -O : output to outfile and stdout
+       -z : line terminator is CR-LF (MS-DOS style)
+       -x : enable #exec built-in macro
+       -m : enable automatic mode switching upon including .h/.c files
+       -n : send LF characters serving as macro terminators to output
+       +c : use next 2 args as comment start and comment end sequences
+       +s : use next 3 args as string start, end and quote character
+      
+       Long options:
+       --include file : process file before infile
+       --nostdinc : don't search standard directories for files to include
+       --nocurinc : don't search the current directory for files to include
+       --curdirinclast : search the current directory last
+       --warninglevel n : set warning level
+       --includemarker formatstring : keep track of #include directives in output
+      
+       --version : display version information and exit
+       -h, --help : display this message and exit
+      
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: -D__CLASSIC_C__ 
+      
+      The output was:
+      0
+      
+      /* cv-qualifiers did not exist in K&R C */
+      # define const
+      # define volatile
+      
+      /* If the compiler does not have __has_include, pretend the answer is
+         always no.  */
+      #  define __has_include(x) 0
+      
+      
+      /* Version number components: V=Version, R=Revision, P=Patch
+         Version date components:   YYYY=Year, MM=Month,   DD=Day  */
+      
+      # define COMPILER_ID ""
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";
+      
+      
+      
+      
+      /* Identify known platforms by name.  */
+      # define PLATFORM_ID
+      
+      
+      /* For windows compilers MSVC and Intel we can determine
+         the architecture of the compiler being used.  This is because
+         the compilers do not have flags that can change the architecture,
+         but rather depend on which compiler is being used
+      */
+      #  define ARCHITECTURE_ID
+      
+      /* Convert integer to decimal digit literals.  */
+      
+      /* Convert integer to hex digit literals.  */
+      
+      /* Construct a string literal encoding the version number. */
+      
+      /* Construct a string literal encoding the internal version number. */
+      
+      /* Construct a string literal encoding the version number components. */
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";
+      char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";
+      
+      
+      
+      # if defined(_MSC_VER) || defined(__ibmxl__) || defined(__IBMC__)
+      #  define C_VERSION "90"
+      # else
+      #  define C_VERSION
+      # endif
+      const char* info_language_standard_default =
+        "INFO" ":" "standard_default[" C_VERSION "]";
+      
+      const char* info_language_extensions_default = "INFO" ":" "extensions_default["
+        "OFF"
+      "]";
+      
+      /*--------------------------------------------------------------------------*/
+      
+      # if defined()
+      int main(argc, argv) int argc; char *argv[];
+      # else
+      int main(int argc, char* argv[])
+      # endif
+      {
+        int require = 0;
+        require += info_compiler[argc];
+        require += info_platform[argc];
+        require += info_arch[argc];
+        require += info_language_standard_default[argc];
+        require += info_language_extensions_default[argc];
+        (void)argv;
+        return require;
+      }
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-release/CMakeFiles/3.26.4/CompilerIdC".
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      Usage : gpp [-{o|O} outfile] [-I/include/path] [-Dname=val ...] [-z] [-x] [-m]
+                  [-n] [-C | -T | -H | -X | -P | -U ... [-M ...]] [+c<n> str1 str2]
+                  [+s<n> str1 str2 c] [long options] [infile]
+      
+            default:    #define x y           macro(arg,...)
+       -C : maximum cpp compatibility (includes -n, +c, +s, ...)
+       -T : TeX-like    \\define{x}{y}         \\macro{arg}{...}
+       -H : HTML-like   <#define x|y>         <#macro arg|...>
+       -X : XHTML-like  <#define x|y/>        <#macro arg|.../>
+       -P : prolog compatible cpp-like mode
+       -U : user-defined syntax (specified in 9 following args; see manual)
+       -M : user-defined syntax for meta-macros (specified in 7 following args)
+      
+       -o : output to outfile
+       -O : output to outfile and stdout
+       -z : line terminator is CR-LF (MS-DOS style)
+       -x : enable #exec built-in macro
+       -m : enable automatic mode switching upon including .h/.c files
+       -n : send LF characters serving as macro terminators to output
+       +c : use next 2 args as comment start and comment end sequences
+       +s : use next 3 args as string start, end and quote character
+      
+       Long options:
+       --include file : process file before infile
+       --nostdinc : don't search standard directories for files to include
+       --nocurinc : don't search the current directory for files to include
+       --curdirinclast : search the current directory last
+       --warninglevel n : set warning level
+       --includemarker formatstring : keep track of #include directives in output
+      
+       --version : display version information and exit
+       -h, --help : display this message and exit
+      
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      0
+      
+      
+      /* If the compiler does not have __has_include, pretend the answer is
+         always no.  */
+      #  define __has_include(x) 0
+      
+      
+      /* Version number components: V=Version, R=Revision, P=Patch
+         Version date components:   YYYY=Year, MM=Month,   DD=Day  */
+      
+      # define COMPILER_ID ""
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";
+      
+      
+      
+      
+      /* Identify known platforms by name.  */
+      # define PLATFORM_ID
+      
+      
+      /* For windows compilers MSVC and Intel we can determine
+         the architecture of the compiler being used.  This is because
+         the compilers do not have flags that can change the architecture,
+         but rather depend on which compiler is being used
+      */
+      #  define ARCHITECTURE_ID
+      
+      /* Convert integer to decimal digit literals.  */
+      
+      /* Convert integer to hex digit literals.  */
+      
+      /* Construct a string literal encoding the version number. */
+      
+      /* Construct a string literal encoding the internal version number. */
+      
+      /* Construct a string literal encoding the version number components. */
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";
+      char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";
+      
+      
+      
+      # if defined(_MSC_VER) || defined(__ibmxl__) || defined(__IBMC__)
+      #  define C_VERSION "90"
+      # else
+      #  define C_VERSION
+      # endif
+      const char* info_language_standard_default =
+        "INFO" ":" "standard_default[" C_VERSION "]";
+      
+      const char* info_language_extensions_default = "INFO" ":" "extensions_default["
+        "OFF"
+      "]";
+      
+      /*--------------------------------------------------------------------------*/
+      
+      # if defined(__CLASSIC_C__)
+      int main(argc, argv) int argc; char *argv[];
+      # else
+      int main(int argc, char* argv[])
+      # endif
+      {
+        int require = 0;
+        require += info_compiler[argc];
+        require += info_platform[argc];
+        require += info_arch[argc];
+        require += info_language_standard_default[argc];
+        require += info_language_extensions_default[argc];
+        (void)argv;
+        return require;
+      }
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-release/CMakeFiles/3.26.4/CompilerIdC".
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:1111 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Checking whether the C compiler is IAR using "" terminated after 10 s due to timeout.
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:1111 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Checking whether the C compiler is IAR using "" terminated after 10 s due to timeout.
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      /* This source file must have a .cpp extension so that all C++ compilers
+         recognize the extension without flags.  Borland does not know .cxx for
+         example.  */
+      # error "A C compiler has been selected for C++."
+      
+      /* If the compiler does not have __has_include, pretend the answer is
+         always no.  */
+      #  define __has_include(x) 0
+      
+      
+      /* Version number components: V=Version, R=Revision, P=Patch
+         Version date components:   YYYY=Year, MM=Month,   DD=Day  */
+      
+      # define COMPILER_ID ""
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";
+      
+      
+      
+      
+      /* Identify known platforms by name.  */
+      # define PLATFORM_ID
+      
+      
+      /* For windows compilers MSVC and Intel we can determine
+         the architecture of the compiler being used.  This is because
+         the compilers do not have flags that can change the architecture,
+         but rather depend on which compiler is being used
+      */
+      #  define ARCHITECTURE_ID
+      
+      /* Convert integer to decimal digit literals.  */
+      
+      /* Convert integer to hex digit literals.  */
+      
+      /* Construct a string literal encoding the version number. */
+      
+      /* Construct a string literal encoding the internal version number. */
+      
+      /* Construct a string literal encoding the version number components. */
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";
+      char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";
+      
+      
+      
+      #  define CXX_STD __cplusplus
+      
+      const char* info_language_standard_default = "INFO" ":" "standard_default["
+        "23"
+      "]";
+      
+      const char* info_language_extensions_default = "INFO" ":" "extensions_default["
+        "OFF"
+      "]";
+      
+      /*--------------------------------------------------------------------------*/
+      
+      int main(int argc, char* argv[])
+      {
+        int require = 0;
+        require += info_compiler[argc];
+        require += info_platform[argc];
+        require += info_arch[argc];
+        require += info_language_standard_default[argc];
+        require += info_language_extensions_default[argc];
+        (void)argv;
+        return require;
+      }
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" did not produce an executable in "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-release/CMakeFiles/3.26.4/CompilerIdCXX".
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      stdin:1: error: character not allowed to start a syntax specifier
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      Usage : gpp [-{o|O} outfile] [-I/include/path] [-Dname=val ...] [-z] [-x] [-m]
+                  [-n] [-C | -T | -H | -X | -P | -U ... [-M ...]] [+c<n> str1 str2]
+                  [+s<n> str1 str2 c] [long options] [infile]
+      
+            default:    #define x y           macro(arg,...)
+       -C : maximum cpp compatibility (includes -n, +c, +s, ...)
+       -T : TeX-like    \\define{x}{y}         \\macro{arg}{...}
+       -H : HTML-like   <#define x|y>         <#macro arg|...>
+       -X : XHTML-like  <#define x|y/>        <#macro arg|.../>
+       -P : prolog compatible cpp-like mode
+       -U : user-defined syntax (specified in 9 following args; see manual)
+       -M : user-defined syntax for meta-macros (specified in 7 following args)
+      
+       -o : output to outfile
+       -O : output to outfile and stdout
+       -z : line terminator is CR-LF (MS-DOS style)
+       -x : enable #exec built-in macro
+       -m : enable automatic mode switching upon including .h/.c files
+       -n : send LF characters serving as macro terminators to output
+       +c : use next 2 args as comment start and comment end sequences
+       +s : use next 3 args as string start, end and quote character
+      
+       Long options:
+       --include file : process file before infile
+       --nostdinc : don't search standard directories for files to include
+       --nocurinc : don't search the current directory for files to include
+       --curdirinclast : search the current directory last
+       --warninglevel n : set warning level
+       --includemarker formatstring : keep track of #include directives in output
+      
+       --version : display version information and exit
+       -h, --help : display this message and exit
+      
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      Usage : gpp [-{o|O} outfile] [-I/include/path] [-Dname=val ...] [-z] [-x] [-m]
+                  [-n] [-C | -T | -H | -X | -P | -U ... [-M ...]] [+c<n> str1 str2]
+                  [+s<n> str1 str2 c] [long options] [infile]
+      
+            default:    #define x y           macro(arg,...)
+       -C : maximum cpp compatibility (includes -n, +c, +s, ...)
+       -T : TeX-like    \\define{x}{y}         \\macro{arg}{...}
+       -H : HTML-like   <#define x|y>         <#macro arg|...>
+       -X : XHTML-like  <#define x|y/>        <#macro arg|.../>
+       -P : prolog compatible cpp-like mode
+       -U : user-defined syntax (specified in 9 following args; see manual)
+       -M : user-defined syntax for meta-macros (specified in 7 following args)
+      
+       -o : output to outfile
+       -O : output to outfile and stdout
+       -z : line terminator is CR-LF (MS-DOS style)
+       -x : enable #exec built-in macro
+       -m : enable automatic mode switching upon including .h/.c files
+       -n : send LF characters serving as macro terminators to output
+       +c : use next 2 args as comment start and comment end sequences
+       +s : use next 3 args as string start, end and quote character
+      
+       Long options:
+       --include file : process file before infile
+       --nostdinc : don't search standard directories for files to include
+       --nocurinc : don't search the current directory for files to include
+       --curdirinclast : search the current directory last
+       --warninglevel n : set warning level
+       --includemarker formatstring : keep track of #include directives in output
+      
+       --version : display version information and exit
+       -h, --help : display this message and exit
+      
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      Usage : gpp [-{o|O} outfile] [-I/include/path] [-Dname=val ...] [-z] [-x] [-m]
+                  [-n] [-C | -T | -H | -X | -P | -U ... [-M ...]] [+c<n> str1 str2]
+                  [+s<n> str1 str2 c] [long options] [infile]
+      
+            default:    #define x y           macro(arg,...)
+       -C : maximum cpp compatibility (includes -n, +c, +s, ...)
+       -T : TeX-like    \\define{x}{y}         \\macro{arg}{...}
+       -H : HTML-like   <#define x|y>         <#macro arg|...>
+       -X : XHTML-like  <#define x|y/>        <#macro arg|.../>
+       -P : prolog compatible cpp-like mode
+       -U : user-defined syntax (specified in 9 following args; see manual)
+       -M : user-defined syntax for meta-macros (specified in 7 following args)
+      
+       -o : output to outfile
+       -O : output to outfile and stdout
+       -z : line terminator is CR-LF (MS-DOS style)
+       -x : enable #exec built-in macro
+       -m : enable automatic mode switching upon including .h/.c files
+       -n : send LF characters serving as macro terminators to output
+       +c : use next 2 args as comment start and comment end sequences
+       +s : use next 3 args as string start, end and quote character
+      
+       Long options:
+       --include file : process file before infile
+       --nostdinc : don't search standard directories for files to include
+       --nocurinc : don't search the current directory for files to include
+       --curdirinclast : search the current directory last
+       --warninglevel n : set warning level
+       --includemarker formatstring : keep track of #include directives in output
+      
+       --version : display version information and exit
+       -h, --help : display this message and exit
+      
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      0
+      /* This source file must have a .cpp extension so that all C++ compilers
+         recognize the extension without flags.  Borland does not know .cxx for
+         example.  */
+      # error "A C compiler has been selected for C++."
+      
+      /* If the compiler does not have __has_include, pretend the answer is
+         always no.  */
+      #  define __has_include(x) 0
+      
+      
+      /* Version number components: V=Version, R=Revision, P=Patch
+         Version date components:   YYYY=Year, MM=Month,   DD=Day  */
+      
+      # define COMPILER_ID ""
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";
+      
+      
+      
+      
+      /* Identify known platforms by name.  */
+      # define PLATFORM_ID
+      
+      
+      /* For windows compilers MSVC and Intel we can determine
+         the architecture of the compiler being used.  This is because
+         the compilers do not have flags that can change the architecture,
+         but rather depend on which compiler is being used
+      */
+      #  define ARCHITECTURE_ID
+      
+      /* Convert integer to decimal digit literals.  */
+      
+      /* Convert integer to hex digit literals.  */
+      
+      /* Construct a string literal encoding the version number. */
+      
+      /* Construct a string literal encoding the internal version number. */
+      
+      /* Construct a string literal encoding the version number components. */
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";
+      char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";
+      
+      
+      
+      #  define CXX_STD __cplusplus
+      
+      const char* info_language_standard_default = "INFO" ":" "standard_default["
+        "23"
+      "]";
+      
+      const char* info_language_extensions_default = "INFO" ":" "extensions_default["
+        "OFF"
+      "]";
+      
+      /*--------------------------------------------------------------------------*/
+      
+      int main(int argc, char* argv[])
+      {
+        int require = 0;
+        require += info_compiler[argc];
+        require += info_platform[argc];
+        require += info_arch[argc];
+        require += info_language_standard_default[argc];
+        require += info_language_extensions_default[argc];
+        (void)argv;
+        return require;
+      }
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" did not produce an executable in "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-release/CMakeFiles/3.26.4/CompilerIdCXX".
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      /* This source file must have a .cpp extension so that all C++ compilers
+         recognize the extension without flags.  Borland does not know .cxx for
+         example.  */
+      # error "A C compiler has been selected for C++."
+      
+      /* If the compiler does not have __has_include, pretend the answer is
+         always no.  */
+      #  define __has_include(x) 0
+      
+      
+      /* Version number components: V=Version, R=Revision, P=Patch
+         Version date components:   YYYY=Year, MM=Month,   DD=Day  */
+      
+      # define COMPILER_ID ""
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";
+      
+      
+      
+      
+      /* Identify known platforms by name.  */
+      # define PLATFORM_ID
+      
+      
+      /* For windows compilers MSVC and Intel we can determine
+         the architecture of the compiler being used.  This is because
+         the compilers do not have flags that can change the architecture,
+         but rather depend on which compiler is being used
+      */
+      #  define ARCHITECTURE_ID
+      
+      /* Convert integer to decimal digit literals.  */
+      
+      /* Convert integer to hex digit literals.  */
+      
+      /* Construct a string literal encoding the version number. */
+      
+      /* Construct a string literal encoding the internal version number. */
+      
+      /* Construct a string literal encoding the version number components. */
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";
+      char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";
+      
+      
+      
+      #  define CXX_STD __cplusplus
+      
+      const char* info_language_standard_default = "INFO" ":" "standard_default["
+        "23"
+      "]";
+      
+      const char* info_language_extensions_default = "INFO" ":" "extensions_default["
+        "OFF"
+      "]";
+      
+      /*--------------------------------------------------------------------------*/
+      
+      int main(int argc, char* argv[])
+      {
+        int require = 0;
+        require += info_compiler[argc];
+        require += info_platform[argc];
+        require += info_arch[argc];
+        require += info_language_standard_default[argc];
+        require += info_language_extensions_default[argc];
+        (void)argv;
+        return require;
+      }
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" did not produce an executable in "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-release/CMakeFiles/3.26.4/CompilerIdCXX".
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      stdin:1: error: character not allowed to start a syntax specifier
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      Usage : gpp [-{o|O} outfile] [-I/include/path] [-Dname=val ...] [-z] [-x] [-m]
+                  [-n] [-C | -T | -H | -X | -P | -U ... [-M ...]] [+c<n> str1 str2]
+                  [+s<n> str1 str2 c] [long options] [infile]
+      
+            default:    #define x y           macro(arg,...)
+       -C : maximum cpp compatibility (includes -n, +c, +s, ...)
+       -T : TeX-like    \\define{x}{y}         \\macro{arg}{...}
+       -H : HTML-like   <#define x|y>         <#macro arg|...>
+       -X : XHTML-like  <#define x|y/>        <#macro arg|.../>
+       -P : prolog compatible cpp-like mode
+       -U : user-defined syntax (specified in 9 following args; see manual)
+       -M : user-defined syntax for meta-macros (specified in 7 following args)
+      
+       -o : output to outfile
+       -O : output to outfile and stdout
+       -z : line terminator is CR-LF (MS-DOS style)
+       -x : enable #exec built-in macro
+       -m : enable automatic mode switching upon including .h/.c files
+       -n : send LF characters serving as macro terminators to output
+       +c : use next 2 args as comment start and comment end sequences
+       +s : use next 3 args as string start, end and quote character
+      
+       Long options:
+       --include file : process file before infile
+       --nostdinc : don't search standard directories for files to include
+       --nocurinc : don't search the current directory for files to include
+       --curdirinclast : search the current directory last
+       --warninglevel n : set warning level
+       --includemarker formatstring : keep track of #include directives in output
+      
+       --version : display version information and exit
+       -h, --help : display this message and exit
+      
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      Usage : gpp [-{o|O} outfile] [-I/include/path] [-Dname=val ...] [-z] [-x] [-m]
+                  [-n] [-C | -T | -H | -X | -P | -U ... [-M ...]] [+c<n> str1 str2]
+                  [+s<n> str1 str2 c] [long options] [infile]
+      
+            default:    #define x y           macro(arg,...)
+       -C : maximum cpp compatibility (includes -n, +c, +s, ...)
+       -T : TeX-like    \\define{x}{y}         \\macro{arg}{...}
+       -H : HTML-like   <#define x|y>         <#macro arg|...>
+       -X : XHTML-like  <#define x|y/>        <#macro arg|.../>
+       -P : prolog compatible cpp-like mode
+       -U : user-defined syntax (specified in 9 following args; see manual)
+       -M : user-defined syntax for meta-macros (specified in 7 following args)
+      
+       -o : output to outfile
+       -O : output to outfile and stdout
+       -z : line terminator is CR-LF (MS-DOS style)
+       -x : enable #exec built-in macro
+       -m : enable automatic mode switching upon including .h/.c files
+       -n : send LF characters serving as macro terminators to output
+       +c : use next 2 args as comment start and comment end sequences
+       +s : use next 3 args as string start, end and quote character
+      
+       Long options:
+       --include file : process file before infile
+       --nostdinc : don't search standard directories for files to include
+       --nocurinc : don't search the current directory for files to include
+       --curdirinclast : search the current directory last
+       --warninglevel n : set warning level
+       --includemarker formatstring : keep track of #include directives in output
+      
+       --version : display version information and exit
+       -h, --help : display this message and exit
+      
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      Usage : gpp [-{o|O} outfile] [-I/include/path] [-Dname=val ...] [-z] [-x] [-m]
+                  [-n] [-C | -T | -H | -X | -P | -U ... [-M ...]] [+c<n> str1 str2]
+                  [+s<n> str1 str2 c] [long options] [infile]
+      
+            default:    #define x y           macro(arg,...)
+       -C : maximum cpp compatibility (includes -n, +c, +s, ...)
+       -T : TeX-like    \\define{x}{y}         \\macro{arg}{...}
+       -H : HTML-like   <#define x|y>         <#macro arg|...>
+       -X : XHTML-like  <#define x|y/>        <#macro arg|.../>
+       -P : prolog compatible cpp-like mode
+       -U : user-defined syntax (specified in 9 following args; see manual)
+       -M : user-defined syntax for meta-macros (specified in 7 following args)
+      
+       -o : output to outfile
+       -O : output to outfile and stdout
+       -z : line terminator is CR-LF (MS-DOS style)
+       -x : enable #exec built-in macro
+       -m : enable automatic mode switching upon including .h/.c files
+       -n : send LF characters serving as macro terminators to output
+       +c : use next 2 args as comment start and comment end sequences
+       +s : use next 3 args as string start, end and quote character
+      
+       Long options:
+       --include file : process file before infile
+       --nostdinc : don't search standard directories for files to include
+       --nocurinc : don't search the current directory for files to include
+       --curdirinclast : search the current directory last
+       --warninglevel n : set warning level
+       --includemarker formatstring : keep track of #include directives in output
+      
+       --version : display version information and exit
+       -h, --help : display this message and exit
+      
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/gpp 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      0
+      /* This source file must have a .cpp extension so that all C++ compilers
+         recognize the extension without flags.  Borland does not know .cxx for
+         example.  */
+      # error "A C compiler has been selected for C++."
+      
+      /* If the compiler does not have __has_include, pretend the answer is
+         always no.  */
+      #  define __has_include(x) 0
+      
+      
+      /* Version number components: V=Version, R=Revision, P=Patch
+         Version date components:   YYYY=Year, MM=Month,   DD=Day  */
+      
+      # define COMPILER_ID ""
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";
+      
+      
+      
+      
+      /* Identify known platforms by name.  */
+      # define PLATFORM_ID
+      
+      
+      /* For windows compilers MSVC and Intel we can determine
+         the architecture of the compiler being used.  This is because
+         the compilers do not have flags that can change the architecture,
+         but rather depend on which compiler is being used
+      */
+      #  define ARCHITECTURE_ID
+      
+      /* Convert integer to decimal digit literals.  */
+      
+      /* Convert integer to hex digit literals.  */
+      
+      /* Construct a string literal encoding the version number. */
+      
+      /* Construct a string literal encoding the internal version number. */
+      
+      /* Construct a string literal encoding the version number components. */
+      
+      /* Construct the string literal in pieces to prevent the source from
+         getting matched.  Store it in a pointer rather than an array
+         because some compilers will just produce instructions to fill the
+         array rather than assigning a pointer to a static array.  */
+      char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";
+      char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";
+      
+      
+      
+      #  define CXX_STD __cplusplus
+      
+      const char* info_language_standard_default = "INFO" ":" "standard_default["
+        "23"
+      "]";
+      
+      const char* info_language_extensions_default = "INFO" ":" "extensions_default["
+        "OFF"
+      "]";
+      
+      /*--------------------------------------------------------------------------*/
+      
+      int main(int argc, char* argv[])
+      {
+        int require = 0;
+        require += info_compiler[argc];
+        require += info_platform[argc];
+        require += info_arch[argc];
+        require += info_language_standard_default[argc];
+        require += info_language_extensions_default[argc];
+        (void)argv;
+        return require;
+      }
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" did not produce an executable in "/home/adrianczubaty/Documents/Programming-Languages/List-1/cmake-build-release/CMakeFiles/3.26.4/CompilerIdCXX".
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:1111 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" terminated after 10 s due to timeout.
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:1111 (message)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/home/adrianczubaty/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" terminated after 10 s due to timeout.

@@ -1,0 +1,272 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.26"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "NthBaseCalculatorLib",
+					"jsonFile" : "directory-NthBaseCalculatorLib-Debug-3b24dcc76b52d8e8366f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.26"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "NthBaseCalculatorLib",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "Tests/GoogleTests",
+					"childIndexes" : 
+					[
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-Tests.GoogleTests-Debug-039c2df759eb6f40cb39.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.26"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "Tests/GoogleTests",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "Tests/GoogleTests/lib",
+					"childIndexes" : 
+					[
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-Tests.GoogleTests.lib-Debug-d1d92cec50555d7c35c3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 3,
+					"source" : "Tests/GoogleTests/lib"
+				},
+				{
+					"build" : "Tests/GoogleTests/lib/googlemock",
+					"childIndexes" : 
+					[
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-Tests.GoogleTests.lib.googlemock-Debug-2b30633c6f93536a271e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 4,
+					"source" : "Tests/GoogleTests/lib/googlemock",
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"build" : "Tests/GoogleTests/lib/googletest",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-Tests.GoogleTests.lib.googletest-Debug-c7f1a8fae4e4613d9544.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 5,
+					"source" : "Tests/GoogleTests/lib/googletest",
+					"targetIndexes" : 
+					[
+						5,
+						6
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "List_1",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "NthBaseCalculator",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						3
+					],
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "GoogleTests",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						4
+					],
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "googletest-distribution",
+					"parentIndex" : 2
+				},
+				{
+					"childIndexes" : 
+					[
+						5
+					],
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "gmock",
+					"parentIndex" : 3,
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "gtest",
+					"parentIndex" : 4,
+					"targetIndexes" : 
+					[
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "Google_Tests_run::@2792db6891e684ed7b53",
+					"jsonFile" : "target-Google_Tests_run-Debug-e05897e20adfdabff3a1.json",
+					"name" : "Google_Tests_run",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "NthBaseCalculatorLib::@b7ef1b30ff602b1132b4",
+					"jsonFile" : "target-NthBaseCalculatorLib-Debug-4f5525ec0cad03b7fdb4.json",
+					"name" : "NthBaseCalculatorLib",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "NthBaseCalculator_run::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NthBaseCalculator_run-Debug-7d9e625ae09258741422.json",
+					"name" : "NthBaseCalculator_run",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "gmock::@2ca8b9bd4baefddb9d96",
+					"jsonFile" : "target-gmock-Debug-e4aab40ab498918637c9.json",
+					"name" : "gmock",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "gmock_main::@2ca8b9bd4baefddb9d96",
+					"jsonFile" : "target-gmock_main-Debug-34fef2521a38a23b9fed.json",
+					"name" : "gmock_main",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "gtest::@0b63f2edadee2f17f53a",
+					"jsonFile" : "target-gtest-Debug-ab7af2ec61e301748b19.json",
+					"name" : "gtest",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "gtest_main::@0b63f2edadee2f17f53a",
+					"jsonFile" : "target-gtest_main-Debug-fb8ef21564a4ce3ebcd7.json",
+					"name" : "gtest_main",
+					"projectIndex" : 5
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1/cmake-build-debug",
+		"source" : "/home/adrianczubaty/Dokumenty/Programming-Languages/List-1"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
